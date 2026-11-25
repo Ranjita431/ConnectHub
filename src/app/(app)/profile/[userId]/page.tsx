@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 import { PagePlaceholder } from "@/components/layout/page-placeholder"
 
 type ProfilePageProps = {
@@ -17,7 +18,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function ProfilePage({ params }: ProfilePageProps) {
+async function ProfileContent({ params }: ProfilePageProps) {
   const { userId } = await params
 
   return (
@@ -27,5 +28,15 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
       emptyTitle="Profile preview"
       emptyDescription="User profile information, interests, and shared activity will appear here."
     />
+  )
+}
+
+export default function ProfilePage({ params }: ProfilePageProps) {
+  return (
+    <Suspense
+      fallback={<div className="animate-pulse rounded-2xl bg-slate-100 p-12" />}
+    >
+      <ProfileContent params={params} />
+    </Suspense>
   )
 }
