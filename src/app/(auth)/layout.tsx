@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import { UsersRound } from "lucide-react"
 
@@ -26,7 +25,7 @@ export default function AuthLayout({
       </header>
 
       {/* Authentication content */}
-      <section className="relative z-10 flex flex-1 items-center justify-center px-5 pb-12 pt-4">
+      <section className="relative z-10 flex flex-1 items-center justify-center px-5 pt-4 pb-12">
         {children}
       </section>
 

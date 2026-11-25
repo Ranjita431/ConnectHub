@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import { UsersRound, Compass, Bell, MessageCircle } from "lucide-react"
 
@@ -28,8 +27,8 @@ export default function HomePage() {
         </h1>
 
         <p className="mt-3 max-w-xl text-slate-500">
-          Your people. Your interests. Your community.
-          Discover people, explore communities and build meaningful connections.
+          Your people. Your interests. Your community. Discover people, explore
+          communities and build meaningful connections.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

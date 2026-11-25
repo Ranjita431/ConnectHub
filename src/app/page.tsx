@@ -38,7 +38,6 @@ const communities = [
   },
 ]
 
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f9fc] text-slate-900">
