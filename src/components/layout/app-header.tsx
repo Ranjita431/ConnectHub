@@ -33,10 +33,10 @@ export function AppHeader() {
 
         <div className="hidden h-8 w-px bg-slate-200 sm:block" />
 
-        <button
-          type="button"
+        <Link
+          href="/profile/demo"
           className="flex items-center gap-2 rounded-xl p-1.5 transition hover:bg-slate-50"
-          aria-label="User profile menu"
+          aria-label="View your profile"
         >
           <div className="flex size-9 items-center justify-center rounded-full bg-indigo-100 text-sm font-semibold text-indigo-700">
             A
@@ -47,7 +47,7 @@ export function AppHeader() {
           </span>
 
           <ChevronDown size={16} className="hidden text-slate-400 md:block" />
-        </button>
+        </Link>
       </div>
     </header>
   )

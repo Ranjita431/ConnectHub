@@ -81,7 +81,10 @@ export function AppSidebar() {
 
       {/* Profile */}
       <div className="border-t border-slate-100 pt-5">
-        <div className="flex items-center gap-3 rounded-xl p-2">
+        <Link
+          href="/profile/demo"
+          className="flex items-center gap-3 rounded-xl p-2 transition hover:bg-slate-50"
+        >
           <div className="flex size-10 items-center justify-center rounded-full bg-indigo-100 font-semibold text-indigo-700">
             A
           </div>
@@ -92,7 +95,7 @@ export function AppSidebar() {
             </p>
             <p className="truncate text-xs text-slate-500">View your profile</p>
           </div>
-        </div>
+        </Link>
       </div>
     </aside>
   )
