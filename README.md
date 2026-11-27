@@ -71,9 +71,18 @@ Open http://localhost:3000 in your browser.
 ```text
 connecthub-frontend/
 ├── docs/
+│   ├── submission-assets/
+│   │   ├── screenshots/
+│   │   │   ├── landing-page-desktop.png
+│   │   │   ├── landing-page-mobile.png
+│   │   │   ├── app-shell-desktop.png
+│   │   │   └── app-shell-mobile.png
+│   │   └── wireframes/
+│   │       └── connecthub-wireframes.svg
 │   ├── design-system.md
 │   ├── product-foundation.md
-│   └── wireframes.md
+│   ├── wireframes.md
+│   └── submission-checklist.md
 ├── public/
 ├── src/
 │   ├── app/
@@ -91,7 +100,7 @@ connecthub-frontend/
 └── package.json
 ```
 
-## Planned Application Routes
+## Application Routes
 
 | Route               | Description                     |
 | ------------------- | ------------------------------- |
@@ -107,13 +116,42 @@ connecthub-frontend/
 | `/profile/[userId]` | User profile                    |
 | `/settings`         | Settings interface              |
 
+## Screenshots
+
+### Landing Page
+
+**Desktop**
+
+![ConnectHub Landing Page - Desktop](docs/submission-assets/screenshots/landing-page-desktop.png)
+
+**Mobile**
+
+![ConnectHub Landing Page - Mobile](docs/submission-assets/screenshots/landing-page-mobile.png)
+
+### Application Shell
+
+**Desktop**
+
+![ConnectHub Application Shell - Desktop](docs/submission-assets/screenshots/app-shell-desktop.png)
+
+**Mobile**
+
+![ConnectHub Application Shell - Mobile](docs/submission-assets/screenshots/app-shell-mobile.png)
+
+## Wireframes
+
+The Week 1 wireframe deliverable includes desktop and mobile layouts for the landing page, home, explore, and profile experiences.
+
+[View the complete ConnectHub wireframes](docs/submission-assets/wireframes/connecthub-wireframes.svg).
+
 ## Documentation
 
-Project planning documents are available in the `docs/` directory:
+Project planning and design documents are available in the `docs/` directory:
 
 - `product-foundation.md` — product overview, goals, routes, and user journeys.
 - `design-system.md` — design tokens, typography, spacing, and accessibility rules.
 - `wireframes.md` — desktop and mobile layout plans.
+- `submission-checklist.md` — Week 1 submission deliverables and quality checks.
 
 ## Quality Checks
 
@@ -138,11 +176,11 @@ The current phase does not include:
 - Persistent user data
 - Production authorization or notifications
 
-Any sample users or content used during development will be fictional.
+Any sample users or content used during development are fictional.
 
 ## Development
 
-The Week 1 foundation is being developed on the `week1-foundation` branch.
+The Week 1 foundation is developed on the `week1-foundation` branch. Submission documentation and evidence are maintained through the `week1-final-submission` branch and its pull request.
 
 ## License
 
