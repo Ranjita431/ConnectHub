@@ -4,9 +4,9 @@
 
 **ConnectHub** is a frontend prototype of a social networking and interest-discovery platform. It provides an interface where people can discover others with shared interests, explore communities, build connections, and access social networking features.
 
-The Week 1 goal is to establish the product foundation, design system, and responsive application shell.
+The Week 1 goal was to establish the product foundation, design system, and responsive application shell. The current frontend prototype has since expanded to include local demonstrations of the main social features.
 
-This version focuses on the user interface and navigation. It does not implement a backend, real authentication, messaging functionality, or persistent user data.
+All feature data is fictional and held in shared in-memory state. There is no backend, real authentication, persistent user data, or delivery of messages or notifications to other people.
 
 ## 2. Product Goals
 
@@ -26,34 +26,35 @@ This version focuses on the user interface and navigation. It does not implement
 
 ## 4. Core Application Areas
 
-| Area           | Purpose                                           |
-| -------------- | ------------------------------------------------- |
-| Landing        | Introduce ConnectHub and guide visitors           |
-| Authentication | Provide sign-in and sign-up interfaces            |
-| Home           | Present the main application dashboard            |
-| Explore        | Discover people and communities                   |
-| Connections    | Display a user's connections                      |
-| Communities    | Browse interest-based communities                 |
-| Messages       | Provide the messaging interface placeholder       |
-| Notifications  | Display the notifications interface placeholder   |
-| Profile        | Present a user's profile                          |
-| Settings       | Provide account and preference settings interface |
+| Area           | Purpose                                            |
+| -------------- | -------------------------------------------------- |
+| Landing        | Introduce ConnectHub and guide visitors            |
+| Authentication | Provide sign-in and sign-up interfaces             |
+| Home           | Show sample community activity, people, and spaces |
+| Explore        | Search and filter sample people and communities    |
+| Connections    | Preview connection requests and suggestions        |
+| Communities    | Discover spaces and join or leave locally          |
+| Messages       | Preview conversations and add local demo messages  |
+| Notifications  | Filter, read, and dismiss sample notifications     |
+| Profile        | Show sample profiles and local connection actions  |
+| Settings       | Edit the local demo profile and preferences        |
 
 ## 5. Route Inventory
 
-| Route               | Page          | Access / Purpose |
-| ------------------- | ------------- | ---------------- |
-| `/`                 | Landing       | Public           |
-| `/sign-in`          | Sign In       | Public           |
-| `/sign-up`          | Sign Up       | Public           |
-| `/home`             | Home          | Application      |
-| `/explore`          | Explore       | Application      |
-| `/connections`      | Connections   | Application      |
-| `/communities`      | Communities   | Application      |
-| `/messages`         | Messages      | Application      |
-| `/notifications`    | Notifications | Application      |
-| `/profile/[userId]` | Profile       | Application      |
-| `/settings`         | Settings      | Application      |
+| Route                        | Page             | Access / Purpose |
+| ---------------------------- | ---------------- | ---------------- |
+| `/`                          | Landing          | Public           |
+| `/sign-in`                   | Sign In          | Public           |
+| `/sign-up`                   | Sign Up          | Public           |
+| `/home`                      | Home             | Application      |
+| `/explore`                   | Explore          | Application      |
+| `/connections`               | Connections      | Application      |
+| `/communities`               | Communities      | Application      |
+| `/communities/[communityId]` | Community detail | Application      |
+| `/messages`                  | Messages         | Application      |
+| `/notifications`             | Notifications    | Application      |
+| `/profile/[userId]`          | Profile          | Application      |
+| `/settings`                  | Settings         | Application      |
 
 Additional application-level states:
 
@@ -76,19 +77,19 @@ Additional application-level states:
 
 1. User opens the Home page.
 2. User navigates to Explore.
-3. User views discovery interface placeholders.
-4. User navigates to Communities to explore shared-interest groups.
-5. User opens Connections to view the connections interface.
+3. User searches or filters sample people and communities.
+4. User joins a sample community or sends a local connection request.
+5. User can revisit the result in Communities or Connections during the same session.
 
 ### Journey 3: Access Social Features
 
 1. User navigates using the application navigation.
-2. User opens Messages.
-3. User opens Notifications.
-4. User visits their Profile.
-5. User opens Settings.
+2. User opens a sample conversation and can add a local message.
+3. User reads or dismisses sample notifications.
+4. User visits sample profiles and updates their own demo profile.
+5. User changes local notification and visibility preferences.
 
-These pages will contain interface placeholders during Week 1.
+These behaviors are client-side demonstrations only and reset on refresh.
 
 ### Journey 4: Mobile Navigation
 
@@ -99,27 +100,28 @@ These pages will contain interface placeholders during Week 1.
 
 ## 7. Week 1 Scope
 
-### Included
+### Original Week 1 Foundation
 
 - Public landing page.
 - Sign-in and sign-up page layouts.
-- Application route placeholders.
+- Application routes.
 - Design tokens and reusable UI primitives.
 - Responsive desktop and mobile navigation.
 - Project documentation and Git workflow.
 - Linting, TypeScript, and build validation.
 
-### Not Included
+### Current Prototype Limitations
 
 - Backend or database integration.
 - Real authentication or password storage.
 - Google OAuth integration.
-- Real-time messaging.
-- Feed creation or editing.
-- Production notifications.
+- Persistent feed or community data.
+- Real-time or externally delivered messaging.
+- Email or production notifications.
+- Authorization and enforced profile privacy.
 - Real user data or private contact information.
 - Precise user location tracking.
 
-## 8. Expected Week 1 Outcome
+## 8. Current Frontend Outcome
 
-A responsive, well-structured frontend prototype with all required routes, reusable UI components, documented design tokens, consistent navigation, and a clear foundation for future development.
+A responsive frontend prototype with the required routes, reusable components, local feature demonstrations, documented design tokens, consistent navigation, and a foundation for future backend work.

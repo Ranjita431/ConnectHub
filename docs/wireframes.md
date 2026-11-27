@@ -2,6 +2,8 @@
 
 These low-fidelity wireframes define the layout and content hierarchy for the four primary pages. Each page has desktop and mobile layouts.
 
+The SVG in `submission-assets/wireframes/connecthub-wireframes.svg` is the editable source for these layouts. The current implemented UI has evolved beyond these structural wireframes; the README links to current desktop and mobile screenshots.
+
 ## 1. Landing Page
 
 ### Desktop Layout

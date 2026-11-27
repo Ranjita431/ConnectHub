@@ -1,20 +1,20 @@
 # ConnectHub
 
-A responsive frontend prototype for a social networking and interest-discovery platform.
+A responsive frontend prototype for a social networking and interest-discovery platform. ConnectHub helps people find shared interests, explore communities, and build meaningful connections.
 
-ConnectHub is designed to help people discover others with shared interests, explore communities, and build meaningful connections.
+The current app includes local, in-memory demonstrations of discovery, community membership, connection requests, posts, messages, notifications, profile editing, and preferences. These interactions are not backed by a server and reset when the page is refreshed.
 
 ## Project Overview
 
 This project is being developed as part of a frontend engineering assignment.
 
-The current development phase focuses on:
+The frontend includes:
 
-- Product foundation and user journeys
-- Responsive UI design and design tokens
-- Reusable frontend components
-- Application routing and navigation
-- Maintainable project architecture
+- A public landing page and demo sign-in/sign-up flow
+- Responsive application navigation and route coverage
+- Interactive in-memory previews of ConnectHub features
+- Reusable UI, layout, and feature components
+- Documented design tokens and wireframes
 - Accessibility and frontend quality checks
 
 ## Technology Stack
@@ -86,35 +86,39 @@ connecthub-frontend/
 ├── public/
 ├── src/
 │   ├── app/
+│   │   ├── (app)/
+│   │   ├── (auth)/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
 │   ├── components/
-│   │   ├── ui/
+│   │   ├── dashboard/
+│   │   ├── features/
+│   │   ├── feedback/
+│   │   ├── landing/
 │   │   ├── layout/
-│   │   └── feedback/
-│   ├── features/
-│   ├── constants/
-│   ├── hooks/
+│   │   └── ui/
 │   ├── lib/
-│   ├── types/
-│   └── utils/
 ├── README.md
 └── package.json
 ```
 
 ## Application Routes
 
-| Route               | Description                     |
-| ------------------- | ------------------------------- |
-| `/`                 | Public landing page             |
-| `/sign-in`          | Sign-in interface               |
-| `/sign-up`          | Sign-up interface               |
-| `/home`             | Home dashboard                  |
-| `/explore`          | Discover people and communities |
-| `/connections`      | Connections interface           |
-| `/communities`      | Communities interface           |
-| `/messages`         | Messages interface              |
-| `/notifications`    | Notifications interface         |
-| `/profile/[userId]` | User profile                    |
-| `/settings`         | Settings interface              |
+| Route                        | Description                                   |
+| ---------------------------- | --------------------------------------------- |
+| `/`                          | Public landing page                           |
+| `/sign-in`                   | Sign-in interface                             |
+| `/sign-up`                   | Sign-up interface                             |
+| `/home`                      | Home dashboard                                |
+| `/explore`                   | Discover people and communities               |
+| `/connections`               | Connections interface                         |
+| `/communities`               | Communities interface                         |
+| `/communities/[communityId]` | Community detail and local discussion preview |
+| `/messages`                  | Messages interface                            |
+| `/notifications`             | Notifications interface                       |
+| `/profile/[userId]`          | User profile                                  |
+| `/settings`                  | Settings interface                            |
 
 ## Screenshots
 
@@ -128,19 +132,19 @@ connecthub-frontend/
 
 ![ConnectHub Landing Page - Mobile](docs/submission-assets/screenshots/landing-page-mobile.png)
 
-### Application Shell
+### Logged-in Home
 
 **Desktop**
 
-![ConnectHub Application Shell - Desktop](docs/submission-assets/screenshots/app-shell-desktop.png)
+![ConnectHub Logged-in Home - Desktop](docs/submission-assets/screenshots/app-shell-desktop.png)
 
 **Mobile**
 
-![ConnectHub Application Shell - Mobile](docs/submission-assets/screenshots/app-shell-mobile.png)
+![ConnectHub Logged-in Home - Mobile](docs/submission-assets/screenshots/app-shell-mobile.png)
 
 ## Wireframes
 
-The Week 1 wireframe deliverable includes desktop and mobile layouts for the landing page, home, explore, and profile experiences.
+The wireframe deliverable includes desktop and mobile layouts for the landing page, home, explore, and profile experiences. The editable SVG is provided as the wireframe source; no native Figma `.fig` file is included.
 
 [View the complete ConnectHub wireframes](docs/submission-assets/wireframes/connecthub-wireframes.svg).
 
@@ -167,20 +171,21 @@ npm run build
 
 This is a frontend-only prototype.
 
-The current phase does not include:
+The prototype does not include:
 
 - Backend or database integration
 - Real authentication or password storage
 - OAuth integration
-- Real-time messaging
-- Persistent user data
+- Persistent user data or server-backed feed CRUD
+- Real-time or externally delivered messages
+- Email delivery or production notifications
 - Production authorization or notifications
 
-Any sample users or content used during development are fictional.
+All people, posts, communities, and activity are fictional sample data. Demo interactions exist only in the current browser session and are not shared with other users.
 
 ## Development
 
-The Week 1 foundation is developed on the `week1-foundation` branch. Submission documentation and evidence are maintained through the `week1-final-submission` branch and its pull request.
+The submission branch is `week1-final-submission`, targeting `week1-foundation`. Pull request #1 tracks the Week 1 submission.
 
 ## License
 

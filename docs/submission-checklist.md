@@ -15,9 +15,11 @@
 - Responsive application shell
 - Desktop sidebar and header
 - Mobile navigation
-- Application route placeholders
+- Required application routes and community detail route
+- Local demo experiences for Explore, Connections, Communities, Messages, Notifications, Profiles, and Settings
 - Reusable UI components
 - Loading, error and not-found states
+- Fictional sample identities and content; no backend or persistent user data
 
 ## 3. Documentation
 
@@ -31,20 +33,27 @@
 - Home feed wireframes
 - Explore wireframes
 - Profile wireframes
-- Desktop and mobile screenshots of the landing page and application shell
-- Figma wireframe file
+- Current desktop and mobile screenshots of the landing page and logged-in home
+- Editable SVG wireframe source (Figma-equivalent; no native `.fig` file)
 
 ## 5. Quality Checks
 
-- Prettier: Passed
-- ESLint: Passed
-- TypeScript: Passed
-- Production build: Passed
+- Prettier check: passed
+- ESLint: passed
+- TypeScript: passed
+- Production build: passed
 
 ## 6. Week 1 Limitations
 
-This is a frontend-only prototype. Authentication is demonstrative. No production backend, persistent user data, real messaging or feed CRUD is implemented.
+This is a frontend-only prototype. Authentication is demonstrative. Feature actions update in-memory sample state only; no production backend, persistence, real messaging, email delivery, or enforced privacy is implemented.
 
-## 7. Next Steps
+## 7. Submission Status
 
-Continue feature development and backend integration in subsequent development phases.
+- Branch: `week1-final-submission` → `week1-foundation`
+- Pull request: #1 (open; targets `week1-foundation`)
+- Screenshots: stored in `submission-assets/screenshots/`
+- Wireframes: stored as an editable SVG in `submission-assets/wireframes/`
+
+## 8. Next Steps
+
+Integrate a backend and real authentication in a later development phase.
