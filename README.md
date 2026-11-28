@@ -115,6 +115,7 @@ connecthub-frontend/
 | `/connections`               | Connections interface                         |
 | `/communities`               | Communities interface                         |
 | `/communities/[communityId]` | Community detail and local discussion preview |
+| `/moments`                   | Photo-led moments and story previews          |
 | `/messages`                  | Messages interface                            |
 | `/notifications`             | Notifications interface                       |
 | `/profile/[userId]`          | User profile                                  |
@@ -185,7 +186,7 @@ All people, posts, communities, and activity are fictional sample data. Demo int
 
 ## Development
 
-The submission branch is `week1-final-submission`, targeting `week1-foundation`. Pull request #1 tracks the Week 1 submission.
+The submission branch is `week1-final-submission`, targeting `week1-foundation`. [Pull request #1](https://github.com/Ranjita431/ConnectHub/pull/1) was merged into `week1-foundation` on November 28, 2026.
 
 ## License
 

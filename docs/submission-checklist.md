@@ -3,7 +3,8 @@
 ## 1. Project
 
 - Repository: https://github.com/Ranjita431/ConnectHub
-- Feature branch: `week1-foundation`
+- Submission branch: `week1-final-submission`
+- Base branch: `week1-foundation`
 - Framework: Next.js App Router
 - Language: TypeScript
 - Styling: Tailwind CSS
@@ -16,7 +17,7 @@
 - Desktop sidebar and header
 - Mobile navigation
 - Required application routes and community detail route
-- Local demo experiences for Explore, Connections, Communities, Messages, Notifications, Profiles, and Settings
+- Local demo experiences for Home, Explore, Moments, Connections, Communities, Messages, Notifications, Profiles, and Settings
 - Reusable UI components
 - Loading, error and not-found states
 - Fictional sample identities and content; no backend or persistent user data
@@ -50,7 +51,7 @@ This is a frontend-only prototype. Authentication is demonstrative. Feature acti
 ## 7. Submission Status
 
 - Branch: `week1-final-submission` → `week1-foundation`
-- Pull request: #1 (open; targets `week1-foundation`)
+- Pull request: [#1](https://github.com/Ranjita431/ConnectHub/pull/1) (merged into `week1-foundation` on November 28, 2026)
 - Screenshots: stored in `submission-assets/screenshots/`
 - Wireframes: stored as an editable SVG in `submission-assets/wireframes/`
 

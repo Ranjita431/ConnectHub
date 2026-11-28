@@ -34,6 +34,7 @@ All feature data is fictional and held in shared in-memory state. There is no ba
 | Explore        | Search and filter sample people and communities    |
 | Connections    | Preview connection requests and suggestions        |
 | Communities    | Discover spaces and join or leave locally          |
+| Moments        | Browse photo-led story and moment previews         |
 | Messages       | Preview conversations and add local demo messages  |
 | Notifications  | Filter, read, and dismiss sample notifications     |
 | Profile        | Show sample profiles and local connection actions  |
@@ -51,6 +52,7 @@ All feature data is fictional and held in shared in-memory state. There is no ba
 | `/connections`               | Connections      | Application      |
 | `/communities`               | Communities      | Application      |
 | `/communities/[communityId]` | Community detail | Application      |
+| `/moments`                   | Moments          | Application      |
 | `/messages`                  | Messages         | Application      |
 | `/notifications`             | Notifications    | Application      |
 | `/profile/[userId]`          | Profile          | Application      |

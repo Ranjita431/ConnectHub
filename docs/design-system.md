@@ -2,50 +2,60 @@
 
 ## 1. Overview
 
-ConnectHub uses a clean, modern, responsive visual language designed for a social networking and interest-discovery platform.
+ConnectHub uses a warm, editorial visual language for a social networking and interest-discovery platform. Cream and ivory surfaces, muted plum and lilac accents, charcoal typography, and natural photography keep the interface welcoming and professional.
 
-The design system provides consistent colors, typography, spacing, components, and interaction patterns throughout the application.
+The product palette is intentionally soft rather than pink-heavy. Shared components use the same tokens, spacing, and interaction patterns throughout the application.
 
 ## 2. Color Palette
 
-### Named UI Tokens
+### Product palette
 
-ConnectHub-specific utilities are defined in `src/app/globals.css` and use the `hub-*` namespace. The core palette is:
+ConnectHub-specific utilities are defined in `src/app/globals.css` under the `hub-*` namespace. These are the current light-theme values:
 
 | Token                | Value     | Use                                |
 | -------------------- | --------- | ---------------------------------- |
-| `hub-primary`        | `#5141cf` | Primary actions and brand emphasis |
-| `hub-primary-hover`  | `#40369b` | Primary hover state                |
-| `hub-primary-soft`   | `#f0edfc` | Selected and highlighted surfaces  |
-| `hub-primary-border` | `#d7cff5` | Brand-tinted borders               |
-| `hub-focus`          | `#6553d2` | Visible focus indicators           |
-| `hub-canvas`         | `#f7f6f2` | Warm application canvas            |
-| `hub-surface`        | `#ffffff` | Main content surface               |
-| `hub-ink`            | `#302d39` | Primary body text                  |
-| `hub-title`          | `#292733` | Page and section headings          |
-| `hub-muted`          | `#77747b` | Secondary text                     |
-| `hub-border`         | `#e7e4dc` | Standard separators and borders    |
-| `hub-divider`        | `#efede7` | Subtle internal separators         |
-| `hub-danger`         | `#a9485b` | Destructive or negative actions    |
-| `hub-success`        | `#536b48` | Positive status details            |
+| `hub-primary`        | `#685575` | Primary actions and brand emphasis |
+| `hub-primary-hover`  | `#51415e` | Primary hover state                |
+| `hub-primary-deep`   | `#40324b` | High-contrast plum surfaces        |
+| `hub-accent`         | `#90769b` | Secondary plum/lilac accents       |
+| `hub-primary-soft`   | `#f0ebf3` | Selected and highlighted surfaces  |
+| `hub-primary-wash`   | `#f8f5f8` | Subtle brand-tinted surfaces       |
+| `hub-primary-border` | `#d8cbdc` | Brand-tinted borders               |
+| `hub-canvas`         | `#f8f6f1` | Warm application canvas            |
+| `hub-surface`        | `#fffdfa` | Main content surface               |
+| `hub-surface-warm`   | `#faf7f1` | Warm secondary surface             |
+| `hub-ink`            | `#342f38` | Primary body text                  |
+| `hub-title`          | `#302b34` | Page and section headings          |
+| `hub-body`           | `#514c55` | Body text                          |
+| `hub-muted`          | `#746e77` | Secondary text                     |
+| `hub-border`         | `#e8e1dc` | Standard separators and borders    |
+| `hub-focus`          | `#80678f` | Visible focus indicators           |
+| `hub-danger`         | `#a65368` | Destructive or negative actions    |
+| `hub-success`        | `#586d53` | Positive status details            |
 
-Semantic CSS variables for primary, secondary, background, surface, text, border, success, warning, danger, and focus states remain available for shared primitives. Community illustrations and sample avatar colors use a small set of intentionally varied accent colors.
-
-The shared semantic tokens support a `.dark` theme; the ConnectHub product palette is currently tuned for the light application design.
+Shared primitives also use semantic CSS variables for primary, secondary, background, surface, text, border, status, and focus states. These remain available for the `.dark` theme; the ConnectHub product palette is currently tuned for the light application design. Illustrations and sample avatars use a restrained set of additional accent colors.
 
 ## 3. Typography
 
-Font family: Geist Sans
+### UI and body
 
-Monospace font: Geist Mono
+Geist Sans is used for body text, navigation, controls, and general interface content.
 
-Typography hierarchy:
+### Editorial headings
 
-- Page title: Large, bold
-- Section title: Medium to large, semibold
-- Body: Regular
-- Caption: Small, muted
-- Label: Small to medium, medium weight
+Georgia, with Times New Roman and the system serif as fallbacks, is reserved for selected editorial headings. It is an accent to the UI typography, not a body font.
+
+### Monospace
+
+Geist Mono is available for code-like or technical content.
+
+The hierarchy is:
+
+- Page title: large, clear, and usually sans-serif; editorial serif is used selectively.
+- Section title: medium to large, semibold.
+- Body: regular weight with comfortable line height.
+- Caption: small and muted, while retaining readable contrast.
+- Label: small to medium, medium weight.
 
 ## 4. Spacing System
 
@@ -76,10 +86,11 @@ The interface follows a mobile-first development approach.
 ## 6. Component Styling
 
 - Consistent border colors
-- Rounded corners using shared radius tokens
+- Rounded corners use the shared radius scale, based on a `0.75rem` base radius.
 - Subtle shadows where appropriate
 - Clear visual separation between content sections
 - Consistent padding and alignment
+- Warm surfaces and delicate borders support the editorial palette without excess decoration.
 
 ## 7. Interaction States
 
@@ -110,11 +121,12 @@ Keyboard users must have visible focus indicators.
 - Tailwind CSS v4
 - shadcn/ui with Base UI
 - Lucide React
-- Geist typography
+- Geist Sans and Geist Mono with a Georgia editorial heading stack
 
 ## 10. Implementation Notes
 
 - Shared semantic and `hub-*` design tokens are maintained in `src/app/globals.css`.
+- Geist Sans and Geist Mono are loaded in `src/app/layout.tsx`; the editorial serif stack is defined in `src/app/globals.css`.
 - Reusable UI components belong in `src/components/ui/`.
 - Layout components belong in `src/components/layout/`.
 - Dashboard and feature-specific components belong in `src/components/dashboard/` and `src/components/features/`.
