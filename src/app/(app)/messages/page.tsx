@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
-import { PagePlaceholder } from "@/components/layout/page-placeholder"
+import { Suspense } from "react"
+import { Skeleton } from "@/components/feedback/skeleton"
+import { MessagesPage as MessagesExperience } from "@/components/features/messages/messages-page"
 
 export const metadata: Metadata = {
   title: "Messages",
@@ -7,11 +9,15 @@ export const metadata: Metadata = {
 
 export default function MessagesPage() {
   return (
-    <PagePlaceholder
-      title="Messages"
-      description="Stay in touch and have meaningful conversations with your connections."
-      emptyTitle="Your conversations start here"
-      emptyDescription="Your private conversations will appear here when messaging becomes available."
-    />
+    <Suspense
+      fallback={
+        <div className="space-y-4">
+          <Skeleton className="h-16 w-2/3" />
+          <Skeleton className="h-[520px] w-full" />
+        </div>
+      }
+    >
+      <MessagesExperience />
+    </Suspense>
   )
 }

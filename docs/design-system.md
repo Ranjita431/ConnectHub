@@ -8,38 +8,30 @@ The design system provides consistent colors, typography, spacing, components, a
 
 ## 2. Color Palette
 
-### Brand Colors
+### Named UI Tokens
 
-- Primary: Indigo
-- Primary foreground: White
-- Secondary: Slate
-- Accent: Light indigo
+ConnectHub-specific utilities are defined in `src/app/globals.css` and use the `hub-*` namespace. The core palette is:
 
-### Surface Colors
+| Token                | Value     | Use                                |
+| -------------------- | --------- | ---------------------------------- |
+| `hub-primary`        | `#5141cf` | Primary actions and brand emphasis |
+| `hub-primary-hover`  | `#40369b` | Primary hover state                |
+| `hub-primary-soft`   | `#f0edfc` | Selected and highlighted surfaces  |
+| `hub-primary-border` | `#d7cff5` | Brand-tinted borders               |
+| `hub-focus`          | `#6553d2` | Visible focus indicators           |
+| `hub-canvas`         | `#f7f6f2` | Warm application canvas            |
+| `hub-surface`        | `#ffffff` | Main content surface               |
+| `hub-ink`            | `#302d39` | Primary body text                  |
+| `hub-title`          | `#292733` | Page and section headings          |
+| `hub-muted`          | `#77747b` | Secondary text                     |
+| `hub-border`         | `#e7e4dc` | Standard separators and borders    |
+| `hub-divider`        | `#efede7` | Subtle internal separators         |
+| `hub-danger`         | `#a9485b` | Destructive or negative actions    |
+| `hub-success`        | `#536b48` | Positive status details            |
 
-- Background: Light slate
-- Surface: White
-- Card: White
-- Popover: White
+Semantic CSS variables for primary, secondary, background, surface, text, border, success, warning, danger, and focus states remain available for shared primitives. Community illustrations and sample avatar colors use a small set of intentionally varied accent colors.
 
-### Text Colors
-
-- Foreground: Dark slate
-- Muted foreground: Slate gray
-- Secondary foreground: Dark slate
-
-### Semantic Colors
-
-- Success: Green
-- Warning: Amber
-- Danger: Red
-- Focus: Indigo
-
-### Additional Theme
-
-A dark theme is defined using the `.dark` CSS class.
-
-All color values are maintained as CSS custom properties in `src/app/globals.css`.
+The shared semantic tokens support a `.dark` theme; the ConnectHub product palette is currently tuned for the light application design.
 
 ## 3. Typography
 
@@ -122,8 +114,8 @@ Keyboard users must have visible focus indicators.
 
 ## 10. Implementation Notes
 
-- Shared design tokens are maintained in `src/app/globals.css`.
+- Shared semantic and `hub-*` design tokens are maintained in `src/app/globals.css`.
 - Reusable UI components belong in `src/components/ui/`.
 - Layout components belong in `src/components/layout/`.
-- Feature-specific components belong in their respective feature folders.
-- Avoid duplicating styles and arbitrary color values.
+- Dashboard and feature-specific components belong in `src/components/dashboard/` and `src/components/features/`.
+- Use named `hub-*` utilities for the core interface palette; reserve component-specific accent colors for illustrative artwork and sample avatars.

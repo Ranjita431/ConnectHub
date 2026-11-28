@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
-import { PagePlaceholder } from "@/components/layout/page-placeholder"
+import { Suspense } from "react"
+import { Skeleton } from "@/components/feedback/skeleton"
+import { ExplorePage as ExplorePageContent } from "@/components/features/explore/explore-page"
 
 export const metadata: Metadata = {
   title: "Explore",
@@ -7,11 +9,16 @@ export const metadata: Metadata = {
 
 export default function ExplorePage() {
   return (
-    <PagePlaceholder
-      title="Explore"
-      description="Discover people, interests, and communities that inspire you."
-      emptyTitle="Discover something new"
-      emptyDescription="Your personalized discovery experience will appear here as ConnectHub grows."
-    />
+    <Suspense
+      fallback={
+        <div className="space-y-5">
+          <Skeleton className="h-20 w-2/3" />
+          <Skeleton className="h-32 w-full" />
+          <Skeleton className="h-64 w-full" />
+        </div>
+      }
+    >
+      <ExplorePageContent />
+    </Suspense>
   )
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Suspense } from "react"
-import { PagePlaceholder } from "@/components/layout/page-placeholder"
+import { notFound } from "next/navigation"
+import { ProfilePage as ProfileExperience } from "@/components/features/profile/profile-page"
+import { demoPeople } from "@/lib/demo-platform"
 
 type ProfilePageProps = {
   params: Promise<{
@@ -12,23 +14,30 @@ export async function generateMetadata({
   params,
 }: ProfilePageProps): Promise<Metadata> {
   const { userId } = await params
+  const person = demoPeople.find((item) => item.id === userId)
 
   return {
-    title: `Profile ${userId}`,
+    title:
+      userId === "alex" || userId === "demo"
+        ? "My profile"
+        : person
+          ? `${person.name}'s profile`
+          : "Profile",
   }
 }
 
 async function ProfileContent({ params }: ProfilePageProps) {
   const { userId } = await params
 
-  return (
-    <PagePlaceholder
-      title="User Profile"
-      description={`Viewing profile: ${userId}`}
-      emptyTitle="Profile preview"
-      emptyDescription="User profile information, interests, and shared activity will appear here."
-    />
-  )
+  if (
+    userId !== "alex" &&
+    userId !== "demo" &&
+    !demoPeople.some((person) => person.id === userId)
+  ) {
+    notFound()
+  }
+
+  return <ProfileExperience personId={userId} />
 }
 
 export default function ProfilePage({ params }: ProfilePageProps) {
