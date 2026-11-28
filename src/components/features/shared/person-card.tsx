@@ -18,7 +18,7 @@ export function PersonCard({
       className={`flex min-w-0 items-center gap-3 ${
         compact
           ? "border-hub-divider border-b py-3 last:border-b-0"
-          : "border-hub-border rounded-2xl border bg-white p-4"
+          : "border-hub-border rounded-xl border bg-hub-surface p-4 shadow-sm shadow-[#413247]/[0.035] transition-shadow duration-200 hover:shadow-md hover:shadow-[#413247]/[0.07] motion-reduce:transition-none"
       }`}
     >
       <Avatar

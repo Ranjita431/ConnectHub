@@ -116,7 +116,7 @@ export function NotificationsPage() {
                 <li
                   key={notification.id}
                   className={`border-hub-divider flex items-start gap-3 border-b p-4 last:border-b-0 sm:gap-4 sm:p-5 ${
-                    notification.isRead ? "" : "bg-[#f8f6ff]"
+                    notification.isRead ? "" : "bg-hub-primary-wash"
                   }`}
                 >
                   {actor ? (
@@ -162,7 +162,7 @@ export function NotificationsPage() {
                         onClick={() =>
                           actions.markNotificationRead(notification.id)
                         }
-                        className="text-hub-muted hover:text-hub-primary flex size-8 items-center justify-center rounded-full hover:bg-[#eeece8]"
+                        className="text-hub-muted hover:text-hub-primary flex size-8 items-center justify-center rounded-full hover:bg-hub-neutral-hover"
                       >
                         <Check size={14} aria-hidden="true" />
                       </button>

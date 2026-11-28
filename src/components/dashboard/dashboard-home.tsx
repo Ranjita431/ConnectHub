@@ -17,19 +17,16 @@ function WelcomePanel({ firstName }: { firstName: string }) {
   return (
     <section
       aria-labelledby="dashboard-title"
-      className="bg-hub-night relative isolate overflow-hidden rounded-[1.4rem] px-5 py-6 text-white sm:px-7 sm:py-7"
+      className="bg-hub-night relative isolate overflow-hidden rounded-2xl px-5 py-7 text-white sm:px-8 sm:py-9"
     >
       <div className="relative z-10 max-w-2xl">
         <p className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.16em] text-[#cbc1f0] uppercase">
-          <span
-            className="size-1.5 rounded-full bg-[#d2e39a]"
-            aria-hidden="true"
-          />
+          <span className="size-1.5 rounded-full bg-[#d8b8c2]" aria-hidden="true" />
           Your ConnectHub space
         </p>
         <h1
           id="dashboard-title"
-          className="mt-3 text-2xl leading-tight font-semibold tracking-[-0.045em] sm:text-[2rem]"
+          className="editorial-heading mt-3 text-[1.85rem] leading-tight text-white sm:text-[2.25rem]"
         >
           Good to see you, {firstName}.
         </h1>
@@ -62,17 +59,17 @@ function WelcomePanel({ firstName }: { firstName: string }) {
       >
         <path
           d="M32 43C88 14 166 20 244 55M30 43C75 94 131 118 218 126M244 55C235 82 227 103 218 126"
-          stroke="#c8baff"
+          stroke="#d8cbdc"
           strokeOpacity=".42"
           strokeDasharray="3 7"
         />
-        <circle cx="32" cy="43" r="13" fill="#c8baff" fillOpacity=".2" />
+        <circle cx="32" cy="43" r="13" fill="#d8cbdc" fillOpacity=".2" />
         <circle cx="32" cy="43" r="4" fill="#d9d2fa" />
-        <circle cx="244" cy="55" r="19" fill="#d8e6ab" fillOpacity=".17" />
-        <circle cx="244" cy="55" r="5" fill="#d8e6ab" />
-        <circle cx="218" cy="126" r="14" fill="#f3b69a" fillOpacity=".2" />
-        <circle cx="218" cy="126" r="4" fill="#f3b69a" />
-        <circle cx="132" cy="78" r="3" fill="#f3b69a" />
+        <circle cx="244" cy="55" r="19" fill="#d9c8dc" fillOpacity=".16" />
+        <circle cx="244" cy="55" r="5" fill="#e2d4e5" />
+        <circle cx="218" cy="126" r="14" fill="#c9959f" fillOpacity=".18" />
+        <circle cx="218" cy="126" r="4" fill="#d6adb5" />
+        <circle cx="132" cy="78" r="3" fill="#d6adb5" />
       </svg>
     </section>
   )

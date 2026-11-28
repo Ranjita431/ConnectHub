@@ -32,7 +32,7 @@ export function LandingHowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="scroll-mt-24 bg-[#eae7df] py-20 sm:py-24 lg:py-28"
+      className="scroll-mt-24 bg-[#f0ede7] py-20 sm:py-24 lg:py-28"
       aria-labelledby="how-title"
     >
       <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-10">
@@ -42,7 +42,7 @@ export function LandingHowItWorks() {
           </p>
           <h2
             id="how-title"
-            className="mt-4 text-3xl leading-[1.08] font-medium tracking-[-0.055em] text-[var(--landing-ink)] sm:text-4xl lg:text-[3.25rem]"
+            className="editorial-heading mt-4 text-3xl leading-[1.08] text-[var(--landing-ink)] sm:text-4xl lg:text-[3.25rem]"
           >
             Start with a hello to yourself.
           </h2>

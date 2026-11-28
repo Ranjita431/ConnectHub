@@ -7,12 +7,12 @@ type BadgeProps = HTMLAttributes<HTMLSpanElement> & {
 }
 
 const variants = {
-  default: "bg-indigo-100 text-indigo-700",
-  secondary: "bg-slate-100 text-slate-700",
-  success: "bg-emerald-100 text-emerald-700",
-  warning: "bg-amber-100 text-amber-700",
-  danger: "bg-rose-100 text-rose-700",
-  outline: "border border-slate-200 bg-white text-slate-600",
+  default: "bg-hub-primary-soft text-hub-primary-deep",
+  secondary: "bg-hub-neutral-hover text-hub-body",
+  success: "bg-hub-success/10 text-hub-success",
+  warning: "bg-amber-50 text-amber-800",
+  danger: "bg-hub-danger-soft text-hub-danger",
+  outline: "border-hub-border-control bg-hub-surface text-hub-body",
 }
 
 function Badge({ variant = "default", className, ...props }: BadgeProps) {

@@ -1,15 +1,15 @@
 .landing-page {
-  --landing-paper: #f6f4ed;
-  --landing-ink: #24232b;
-  --landing-muted: #6f6b70;
-  --landing-line: rgb(36 35 43 / 12%);
+  --landing-paper: #f8f6f1;
+  --landing-ink: #302b34;
+  --landing-muted: #716b74;
+  --landing-line: rgb(48 43 52 / 12%);
   min-height: 100vh;
   background: var(--landing-paper);
   color: var(--landing-ink);
 }
 
 .landing-page .serifAccent {
-  color: #5141cf;
+  color: #685575;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.94em;
   font-style: italic;
@@ -32,8 +32,8 @@
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgb(222 217 237 / 66%) 0%,
-    rgb(238 232 217 / 45%) 55%,
+    rgb(224 213 230 / 62%) 0%,
+    rgb(239 231 218 / 42%) 55%,
     transparent 74%
   );
 }
@@ -41,7 +41,7 @@
 .landing-page .artRing {
   position: absolute;
   inset: 9%;
-  border: 1px solid rgb(81 65 207 / 14%);
+  border: 1px solid rgb(104 85 117 / 14%);
   border-radius: 50%;
 }
 
@@ -49,7 +49,7 @@
 .landing-page .artRing::after {
   position: absolute;
   content: "";
-  border: 1px solid rgb(81 65 207 / 13%);
+  border: 1px solid rgb(104 85 117 / 12%);
   border-radius: 50%;
 }
 
@@ -70,13 +70,13 @@
 }
 
 .landing-page .network path {
-  stroke: rgb(81 65 207 / 27%);
+  stroke: rgb(104 85 117 / 24%);
   stroke-width: 1.25;
   stroke-dasharray: 4 7;
 }
 
 .landing-page .network circle {
-  fill: #ec8d6b;
+  fill: #b97d86;
 }
 
 .landing-page .centerNode {
@@ -92,7 +92,7 @@
   justify-content: center;
   border: 1px solid rgb(255 255 255 / 27%);
   border-radius: 50%;
-  background: #302844;
+  background: #342e3b;
   box-shadow:
     0 18px 50px rgb(48 40 68 / 18%),
     0 0 0 10px rgb(255 255 255 / 48%);
@@ -131,7 +131,7 @@
   height: 9px;
   border: 1.5px solid #d3c8ff;
   border-radius: 50%;
-  background: #302844;
+  background: #342e3b;
 }
 
 .landing-page .centerMark span:nth-child(1) {
@@ -157,11 +157,11 @@
   align-items: center;
   gap: 9px;
   padding: 7px 12px 7px 7px;
-  border: 1px solid rgb(36 35 43 / 8%);
+  border: 1px solid rgb(48 43 52 / 9%);
   border-radius: 999px;
   background: rgb(255 255 255 / 88%);
   box-shadow: 0 8px 26px rgb(36 35 43 / 8%);
-  animation: drift 8s ease-in-out infinite;
+  animation: drift 12s ease-in-out infinite;
 }
 
 .landing-page .interestSymbol {
@@ -172,8 +172,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #e6e1f8;
-  color: #5141cf;
+  background: #eee7f0;
+  color: #685575;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
   font-style: italic;
@@ -191,8 +191,8 @@
 }
 
 .landing-page .nodeTwo .interestSymbol {
-  background: #f4e3d6;
-  color: #aa634d;
+  background: #f1e3df;
+  color: #8e5c61;
 }
 
 .landing-page .nodeThree {
@@ -202,8 +202,8 @@
 }
 
 .landing-page .nodeThree .interestSymbol {
-  background: #e6ecd9;
-  color: #657747;
+  background: #e9e9df;
+  color: #61684f;
 }
 
 .landing-page .nodeFour {
@@ -213,8 +213,8 @@
 }
 
 .landing-page .nodeFour .interestSymbol {
-  background: #f3e7c9;
-  color: #94733b;
+  background: #efe7d9;
+  color: #806b4e;
 }
 
 .landing-page .spark {
@@ -228,7 +228,7 @@
 .landing-page .sparkOne {
   top: 34%;
   left: 19%;
-  background: #ed8d6b;
+  background: #b97d86;
 }
 
 .landing-page .sparkTwo {
@@ -236,7 +236,7 @@
   right: 16%;
   width: 5px;
   height: 5px;
-  background: #a7b677;
+  background: #9c9b7d;
 }
 
 .landing-page .sparkThree {
@@ -244,7 +244,7 @@
   left: 29%;
   width: 5px;
   height: 5px;
-  background: #5141cf;
+  background: #685575;
 }
 
 .landing-page .steps {
@@ -264,7 +264,7 @@
   left: 0;
   width: 1px;
   content: "";
-  background: rgb(36 35 43 / 16%);
+  background: rgb(48 43 52 / 16%);
 }
 
 .landing-page .step:last-child::before {
@@ -277,17 +277,17 @@
   height: 2.25rem;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(81 65 207 / 28%);
+  border: 1px solid rgb(104 85 117 / 28%);
   border-radius: 50%;
-  background: #eae7df;
-  color: #5141cf;
+  background: #eee9e2;
+  color: #685575;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
 
 .landing-page .ctaAccent {
-  color: #c8baff;
+  color: #e0d5e5;
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
   font-weight: 400;
@@ -307,7 +307,7 @@
 .landing-page .ctaOrbit span {
   position: absolute;
   inset: 0;
-  border: 1px solid rgb(200 186 255 / 12%);
+  border: 1px solid rgb(224 213 229 / 14%);
   border-radius: 50%;
 }
 
@@ -317,7 +317,7 @@
 
 .landing-page .ctaOrbit span:nth-child(3) {
   inset: 30%;
-  background: rgb(200 186 255 / 4%);
+  background: rgb(224 213 229 / 5%);
 }
 
 @keyframes drift {
@@ -327,7 +327,7 @@
   }
 
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
 }
 

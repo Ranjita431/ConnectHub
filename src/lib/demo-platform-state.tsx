@@ -30,6 +30,15 @@ type PlatformAction =
       createdAt: string
     }
   | { type: "post/like"; postId: string }
+  | { type: "social/like"; postId: string }
+  | { type: "social/save"; postId: string }
+  | { type: "social/comment"; postId: string }
+  | {
+      type: "social/create"
+      message: string
+      createdAt: string
+      imageUrls: string[]
+    }
   | {
       type: "message/send"
       conversationId: string
@@ -169,6 +178,69 @@ function platformReducer(
             : post,
         ),
       }
+    case "social/like":
+      return {
+        ...state,
+        socialPosts: state.socialPosts.map((post) =>
+          post.id === action.postId
+            ? {
+                ...post,
+                likedByMe: !post.likedByMe,
+                likeCount: Math.max(
+                  0,
+                  post.likeCount + (post.likedByMe ? -1 : 1),
+                ),
+              }
+            : post,
+        ),
+      }
+    case "social/save":
+      return {
+        ...state,
+        socialPosts: state.socialPosts.map((post) =>
+          post.id === action.postId
+            ? { ...post, savedByMe: !post.savedByMe }
+            : post,
+        ),
+      }
+    case "social/comment":
+      return {
+        ...state,
+        socialPosts: state.socialPosts.map((post) =>
+          post.id === action.postId
+            ? { ...post, commentCount: post.commentCount + 1 }
+            : post,
+        ),
+      }
+    case "social/create": {
+      const message = action.message.trim()
+      if (!message && action.imageUrls.length === 0) return state
+      return {
+        ...state,
+        socialPosts: [
+          {
+            id: `social-post-${state.nextPostId}`,
+            authorId: "alex",
+            message,
+            createdAt: action.createdAt,
+            kind:
+              action.imageUrls.length > 1
+                ? "multi"
+                : action.imageUrls.length === 1
+                  ? "photo"
+                  : "text",
+            imageUrls: action.imageUrls,
+            likeCount: 0,
+            likedByMe: false,
+            savedByMe: false,
+            commentCount: 0,
+            location: "Shared locally",
+          },
+          ...state.socialPosts,
+        ],
+        nextPostId: state.nextPostId + 1,
+      }
+    }
     case "message/send": {
       const text = action.text.trim()
       if (!text) return state
@@ -259,6 +331,10 @@ type DemoPlatformActions = {
   leaveCommunity: (communityId: string) => void
   createPost: (communityId: string, message: string) => void
   togglePostLike: (postId: string) => void
+  toggleSocialPostLike: (postId: string) => void
+  toggleSocialPostSave: (postId: string) => void
+  addSocialPostComment: (postId: string) => void
+  createSocialPost: (message: string, imageUrls: string[]) => void
   sendMessage: (conversationId: string, text: string) => void
   markConversationRead: (conversationId: string) => void
   markNotificationRead: (notificationId: string) => void
@@ -330,6 +406,28 @@ export function DemoPlatformProvider({ children }: { children: ReactNode }) {
     (postId: string) => dispatch({ type: "post/like", postId }),
     [],
   )
+  const toggleSocialPostLike = useCallback(
+    (postId: string) => dispatch({ type: "social/like", postId }),
+    [],
+  )
+  const toggleSocialPostSave = useCallback(
+    (postId: string) => dispatch({ type: "social/save", postId }),
+    [],
+  )
+  const addSocialPostComment = useCallback(
+    (postId: string) => dispatch({ type: "social/comment", postId }),
+    [],
+  )
+  const createSocialPost = useCallback(
+    (message: string, imageUrls: string[]) =>
+      dispatch({
+        type: "social/create",
+        message,
+        createdAt: currentTimeLabel(),
+        imageUrls,
+      }),
+    [],
+  )
   const sendMessage = useCallback(
     (conversationId: string, text: string) =>
       dispatch({
@@ -381,6 +479,10 @@ export function DemoPlatformProvider({ children }: { children: ReactNode }) {
       leaveCommunity,
       createPost,
       togglePostLike,
+      toggleSocialPostLike,
+      toggleSocialPostSave,
+      addSocialPostComment,
+      createSocialPost,
       sendMessage,
       markConversationRead,
       markNotificationRead,
@@ -399,6 +501,10 @@ export function DemoPlatformProvider({ children }: { children: ReactNode }) {
       leaveCommunity,
       createPost,
       togglePostLike,
+      toggleSocialPostLike,
+      toggleSocialPostSave,
+      addSocialPostComment,
+      createSocialPost,
       sendMessage,
       markConversationRead,
       markNotificationRead,

@@ -11,7 +11,7 @@ export default function AppLayout({
 }>) {
   return (
     <DemoPlatformProvider>
-      <div className="flex min-h-screen bg-slate-50">
+      <div className="flex min-h-screen bg-hub-canvas">
         <Suspense fallback={<div className="hidden w-64 shrink-0 lg:block" />}>
           <AppSidebar />
         </Suspense>

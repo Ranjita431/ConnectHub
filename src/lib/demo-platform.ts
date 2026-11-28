@@ -63,6 +63,37 @@ export type DemoProfile = {
   interests: string[]
 }
 
+export type DemoStory = {
+  id: string
+  personId: string
+  imageUrl: string
+  caption: string
+}
+
+export type SocialPost = {
+  id: string
+  authorId: string
+  message: string
+  createdAt: string
+  kind: "photo" | "text" | "video" | "multi"
+  imageUrls: string[]
+  likeCount: number
+  likedByMe: boolean
+  savedByMe: boolean
+  commentCount: number
+  location?: string
+}
+
+export type DemoMoment = {
+  id: string
+  creatorId: string
+  videoUrl: string
+  posterUrl: string
+  caption: string
+  likeCount: number
+  commentCount: number
+}
+
 export type DemoPreferences = {
   profileVisibility: "public" | "connections"
   connectionEmails: boolean
@@ -80,6 +111,7 @@ export type DemoPlatformState = {
   receivedRequestIds: string[]
   sentRequestIds: string[]
   posts: CommunityPost[]
+  socialPosts: SocialPost[]
   conversations: DemoConversation[]
   notifications: DemoNotification[]
   nextMessageId: number
@@ -213,6 +245,63 @@ export const demoInterests = [
   "Music",
 ]
 
+export const demoStories: DemoStory[] = [
+  {
+    id: "story-maya",
+    personId: "maya-chen",
+    imageUrl: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=900&q=85",
+    caption: "Trying a new print color today",
+  },
+  {
+    id: "story-jordan",
+    personId: "jordan-lee",
+    imageUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=85",
+    caption: "Balcony harvest",
+  },
+  {
+    id: "story-samira",
+    personId: "samira-patel",
+    imageUrl: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=85",
+    caption: "A quiet hour in the studio",
+  },
+  {
+    id: "story-camila",
+    personId: "camila-rocha",
+    imageUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85",
+    caption: "The trail after rain",
+  },
+]
+
+export const demoMoments: DemoMoment[] = [
+  {
+    id: "moment-studio",
+    creatorId: "maya-chen",
+    videoUrl: "https://videos.pexels.com/video-files/853800/853800-hd_1920_1080_30fps.mp4",
+    posterUrl: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=900&q=85",
+    caption: "One small print, many little decisions.",
+    likeCount: 284,
+    commentCount: 18,
+  },
+  {
+    id: "moment-garden",
+    creatorId: "jordan-lee",
+    videoUrl: "https://videos.pexels.com/video-files/5528147/5528147-hd_1920_1080_25fps.mp4",
+    posterUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=85",
+    caption: "Checking in with the herbs before dinner.",
+    likeCount: 156,
+    commentCount: 9,
+  },
+  {
+    id: "moment-trail",
+    creatorId: "camila-rocha",
+    videoUrl: "https://videos.pexels.com/video-files/4763824/4763824-hd_1920_1080_24fps.mp4",
+    posterUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85",
+    caption: "Take the long way when you can.",
+    likeCount: 421,
+    commentCount: 32,
+  },
+]
+
 export const initialDemoPlatformState: DemoPlatformState = {
   profile: {
     name: "Alex Morgan",
@@ -263,6 +352,49 @@ export const initialDemoPlatformState: DemoPlatformState = {
       createdAt: "Monday",
       likeCount: 6,
       likedByMe: false,
+    },
+  ],
+  socialPosts: [
+    {
+      id: "social-maya-studio",
+      authorId: "maya-chen",
+      message: "The work is never as polished in the room as it feels in your head. Sharing today’s in-progress print anyway.",
+      createdAt: "18 minutes ago",
+      kind: "photo",
+      imageUrls: ["https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=1200&q=88"],
+      likeCount: 48,
+      likedByMe: false,
+      savedByMe: false,
+      commentCount: 7,
+      location: "Eastside Print Room",
+    },
+    {
+      id: "social-jordan-garden",
+      authorId: "jordan-lee",
+      message: "Three tomatoes, one basil plant, and a tiny bee that has adopted the balcony.",
+      createdAt: "1 hour ago",
+      kind: "multi",
+      imageUrls: [
+        "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=85",
+        "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=900&q=85",
+      ],
+      likeCount: 73,
+      likedByMe: true,
+      savedByMe: false,
+      commentCount: 12,
+      location: "Home balcony",
+    },
+    {
+      id: "social-samira-text",
+      authorId: "samira-patel",
+      message: "A small reminder: your unfinished work is still evidence of curiosity. It does not have to become impressive to be worth continuing.",
+      createdAt: "3 hours ago",
+      kind: "text",
+      imageUrls: [],
+      likeCount: 129,
+      likedByMe: false,
+      savedByMe: true,
+      commentCount: 24,
     },
   ],
   conversations: [

@@ -10,7 +10,8 @@ import {
   MessageCircle,
   Bell,
   Settings,
-  Sparkles,
+  Network,
+  Clapperboard,
 } from "lucide-react"
 import { Avatar } from "@/components/ui/avatar"
 import { useDemoPlatform } from "@/lib/demo-platform-state"
@@ -20,6 +21,7 @@ const navigation = [
   { label: "Explore", href: "/explore", icon: Compass },
   { label: "Connections", href: "/connections", icon: UsersRound },
   { label: "Communities", href: "/communities", icon: Users },
+  { label: "Moments", href: "/moments", icon: Clapperboard },
   { label: "Messages", href: "/messages", icon: MessageCircle },
   { label: "Notifications", href: "/notifications", icon: Bell },
 ]
@@ -29,17 +31,17 @@ export function AppSidebar() {
   const { state } = useDemoPlatform()
 
   return (
-    <aside className="border-hub-border-subtle sticky top-0 hidden h-screen w-64 shrink-0 flex-col border-r bg-[#fcfbf8] px-4 py-6 lg:flex">
+    <aside className="border-hub-border-subtle sticky top-0 hidden h-screen w-64 shrink-0 flex-col border-r bg-hub-surface-warm px-4 py-6 lg:flex">
       <Link
         href="/"
         aria-label="ConnectHub home"
         className="focus-visible:outline-hub-accent flex items-center gap-2.5 rounded-lg px-2 focus-visible:outline-2 focus-visible:outline-offset-4"
       >
-        <div className="flex size-9 items-center justify-center rounded-xl bg-[#5948d1] text-white">
-          <Sparkles size={19} aria-hidden="true" />
+        <div className="bg-hub-primary flex size-9 items-center justify-center rounded-xl text-white">
+          <Network size={18} aria-hidden="true" />
         </div>
         <span className="text-hub-ink text-lg font-bold tracking-[-0.045em]">
-          Connect<span className="text-indigo-600">Hub</span>
+          Connect<span className="text-hub-primary-mid">Hub</span>
         </span>
       </Link>
 
@@ -100,7 +102,7 @@ export function AppSidebar() {
           <Avatar
             name={state.profile.name}
             size="md"
-            className="text-hub-brand-mark bg-[#e8e3f7]"
+            className="text-hub-brand-mark bg-hub-avatar-lavender"
           />
           <div className="min-w-0 flex-1">
             <p className="text-hub-ink truncate text-xs font-semibold">

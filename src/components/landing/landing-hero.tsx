@@ -16,7 +16,7 @@ export function LandingHero() {
           </p>
           <h1
             id="hero-title"
-            className="max-w-[650px] text-[clamp(3.1rem,7.2vw,6.35rem)] leading-[0.96] font-medium tracking-[-0.075em] text-[var(--landing-ink)]"
+            className="editorial-heading max-w-[650px] text-[clamp(3.1rem,7.2vw,6.35rem)] leading-[0.96] text-[var(--landing-ink)]"
           >
             Find your
             <br />
@@ -32,7 +32,7 @@ export function LandingHero() {
           <div className="mt-8 flex flex-col gap-3 min-[420px]:flex-row">
             <Link
               href="/sign-up"
-              className="group bg-hub-primary focus-visible:outline-hub-primary inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-6 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#4031b8] focus-visible:outline-2 focus-visible:outline-offset-3"
+              className="group bg-hub-primary hover:bg-hub-primary-hover focus-visible:outline-hub-primary inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-6 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-3"
             >
               Find your place
               <ArrowRight

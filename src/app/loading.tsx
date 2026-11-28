@@ -1,22 +1,22 @@
-import { Sparkles } from "lucide-react"
+import { Network } from "lucide-react"
 
 export default function Loading() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50">
+    <div className="bg-hub-canvas flex min-h-screen items-center justify-center">
       <div className="flex flex-col items-center gap-4">
-        <div className="flex size-14 items-center justify-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-200">
-          <Sparkles className="size-7" />
+        <div className="bg-hub-primary flex size-14 items-center justify-center rounded-2xl text-white shadow-md shadow-[#413247]/10">
+          <Network className="size-7" />
         </div>
 
         <div className="space-y-2 text-center">
-          <h2 className="text-lg font-semibold text-slate-900">ConnectHub</h2>
-          <p className="text-sm text-slate-500">
+          <h2 className="text-hub-ink text-lg font-semibold">ConnectHub</h2>
+          <p className="text-hub-muted text-sm">
             Getting everything ready for you...
           </p>
         </div>
 
-        <div className="h-1.5 w-36 overflow-hidden rounded-full bg-indigo-100">
-          <div className="h-full w-1/2 animate-pulse rounded-full bg-indigo-600" />
+        <div className="bg-hub-primary-soft h-1.5 w-36 overflow-hidden rounded-full">
+          <div className="bg-hub-primary h-full w-1/2 animate-pulse rounded-full motion-reduce:animate-none" />
         </div>
       </div>
     </div>

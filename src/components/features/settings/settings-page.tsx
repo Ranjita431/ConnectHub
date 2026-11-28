@@ -133,7 +133,7 @@ export function SettingsPage() {
       <div className="grid gap-5 lg:grid-cols-[230px_minmax(0,1fr)]">
         <nav
           aria-label="Settings sections"
-          className="border-hub-border flex gap-1 overflow-x-auto rounded-2xl border bg-white p-2 lg:flex-col lg:self-start"
+          className="border-hub-border bg-hub-surface flex gap-1 overflow-x-auto rounded-2xl border p-2 lg:flex-col lg:self-start"
         >
           {tabItems.map(({ id, label, icon: Icon }) => (
             <button
@@ -146,7 +146,7 @@ export function SettingsPage() {
               }}
               className={`focus-visible:outline-hub-focus inline-flex min-h-10 shrink-0 items-center gap-3 rounded-xl px-3 text-left text-xs font-medium transition-colors focus-visible:outline-2 motion-reduce:transition-none ${
                 activeTab === id
-                  ? "text-hub-primary bg-[#f1effb]"
+                  ? "text-hub-primary bg-hub-primary-soft"
                   : "text-hub-muted hover:text-hub-heading hover:bg-[#f8f7f4]"
               }`}
             >
@@ -158,7 +158,7 @@ export function SettingsPage() {
 
         <section
           aria-labelledby="settings-panel-title"
-          className="border-hub-border min-w-0 overflow-hidden rounded-2xl border bg-white"
+          className="border-hub-border bg-hub-surface min-w-0 overflow-hidden rounded-2xl border"
         >
           <div className="border-hub-divider border-b px-5 py-5 sm:px-7">
             <h2
@@ -178,7 +178,7 @@ export function SettingsPage() {
                 <Avatar
                   name={state.profile.name}
                   size="lg"
-                  className="bg-[#e7e2f5] text-[#57499a]"
+                  className="bg-hub-avatar-lavender text-hub-avatar-lavender-ink"
                 />
                 <div>
                   <p className="text-hub-heading text-sm font-semibold">
@@ -199,7 +199,7 @@ export function SettingsPage() {
                     maxLength={60}
                     value={name}
                     onChange={(event) => setName(event.target.value)}
-                    className="border-hub-border text-hub-ink focus:border-hub-primary-light focus:ring-hub-accent/10 h-10 w-full rounded-lg border bg-white px-3 text-sm font-normal outline-none focus:ring-3"
+                    className="border-hub-border-control bg-hub-input-surface text-hub-ink focus:border-hub-primary-light focus:ring-hub-accent/10 h-10 w-full rounded-lg border px-3 text-sm font-normal outline-none focus:ring-3"
                   />
                 </label>
                 <label className="text-hub-body-muted space-y-1.5 text-xs font-medium">
@@ -210,7 +210,7 @@ export function SettingsPage() {
                     maxLength={254}
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
-                    className="border-hub-border text-hub-ink focus:border-hub-primary-light focus:ring-hub-accent/10 h-10 w-full rounded-lg border bg-white px-3 text-sm font-normal outline-none focus:ring-3"
+                    className="border-hub-border-control bg-hub-input-surface text-hub-ink focus:border-hub-primary-light focus:ring-hub-accent/10 h-10 w-full rounded-lg border px-3 text-sm font-normal outline-none focus:ring-3"
                   />
                 </label>
               </div>
@@ -222,7 +222,7 @@ export function SettingsPage() {
                   maxLength={240}
                   value={bio}
                   onChange={(event) => setBio(event.target.value)}
-                  className="border-hub-border text-hub-ink focus:border-hub-primary-light focus:ring-hub-accent/10 w-full resize-y rounded-lg border bg-white px-3 py-2.5 text-sm leading-6 font-normal outline-none focus:ring-3"
+                  className="border-hub-border-control bg-hub-input-surface text-hub-ink focus:border-hub-primary-light focus:ring-hub-accent/10 w-full resize-y rounded-lg border px-3 py-2.5 text-sm leading-6 font-normal outline-none focus:ring-3"
                 />
               </label>
 
@@ -232,7 +232,7 @@ export function SettingsPage() {
                   value={interests}
                   onChange={(event) => setInterests(event.target.value)}
                   placeholder="Design, gardening, books"
-                  className="border-hub-border text-hub-ink focus:border-hub-primary-light focus:ring-hub-accent/10 h-10 w-full rounded-lg border bg-white px-3 text-sm font-normal outline-none focus:ring-3"
+                  className="border-hub-border-control bg-hub-input-surface text-hub-ink focus:border-hub-primary-light focus:ring-hub-accent/10 h-10 w-full rounded-lg border px-3 text-sm font-normal outline-none focus:ring-3"
                 />
                 <span className="text-hub-placeholder block text-[10px] font-normal">
                   Separate interests with commas.

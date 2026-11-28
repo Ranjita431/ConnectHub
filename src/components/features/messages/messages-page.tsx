@@ -101,7 +101,7 @@ export function MessagesPage() {
           <p className="text-hub-primary-mid text-[10px] font-semibold tracking-[0.16em] uppercase">
             A note between people
           </p>
-          <h1 className="text-hub-title mt-1.5 text-2xl font-semibold tracking-[-0.045em] sm:text-[2rem]">
+          <h1 className="editorial-heading text-hub-title mt-1.5 text-2xl sm:text-[2rem]">
             Messages
           </h1>
           <p className="text-hub-muted mt-2 text-sm leading-6">
@@ -257,7 +257,7 @@ export function MessagesPage() {
               <div
                 aria-live="polite"
                 aria-label="Message history"
-                className="flex min-h-[340px] flex-1 flex-col gap-3 overflow-y-auto bg-[#fbfaf8] p-4 sm:p-6"
+                className="flex min-h-[340px] flex-1 flex-col gap-3 overflow-y-auto bg-hub-surface-warm p-4 sm:p-6"
               >
                 <p className="text-hub-placeholder mb-2 text-center text-[9px] font-medium tracking-[0.12em] uppercase">
                   A little history

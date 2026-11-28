@@ -10,14 +10,14 @@ type EmptyStateProps = {
 
 function EmptyState({ title, description, icon, action }: EmptyStateProps) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 bg-white px-6 py-12 text-center">
-      <div className="mb-4 flex size-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
+    <div className="border-hub-border-control bg-hub-surface flex flex-col items-center justify-center rounded-2xl border border-dashed px-6 py-12 text-center">
+      <div className="bg-hub-primary-soft text-hub-primary flex mb-4 size-12 items-center justify-center rounded-2xl">
         {icon ?? <Inbox className="size-6" />}
       </div>
 
-      <h3 className="text-base font-semibold text-slate-900">{title}</h3>
+      <h3 className="text-hub-title text-base font-semibold">{title}</h3>
 
-      <p className="mt-2 max-w-sm text-sm leading-6 text-slate-500">
+      <p className="text-hub-muted mt-2 max-w-sm text-sm leading-6">
         {description}
       </p>
 

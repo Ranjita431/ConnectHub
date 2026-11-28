@@ -3,26 +3,26 @@ import { ArrowLeft, SearchX } from "lucide-react"
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
-      <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-        <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
+    <div className="bg-hub-canvas flex min-h-screen items-center justify-center px-4">
+      <div className="border-hub-border bg-hub-surface w-full max-w-md rounded-2xl border p-8 text-center shadow-sm">
+        <div className="bg-hub-primary-soft text-hub-primary mx-auto flex size-14 items-center justify-center rounded-2xl">
           <SearchX className="size-7" />
         </div>
 
-        <p className="mt-5 text-sm font-semibold text-indigo-600">ERROR 404</p>
+        <p className="text-hub-primary mt-5 text-sm font-semibold">ERROR 404</p>
 
-        <h1 className="mt-2 text-2xl font-bold text-slate-900">
+        <h1 className="editorial-heading text-hub-title mt-2 text-2xl">
           Page not found
         </h1>
 
-        <p className="mt-2 text-sm leading-6 text-slate-500">
+        <p className="text-hub-muted mt-2 text-sm leading-6">
           Sorry, we couldn&apos;t find the page you&apos;re looking for. It may
           have been moved or doesn&apos;t exist.
         </p>
 
         <Link
           href="/"
-          className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+          className="bg-hub-primary hover:bg-hub-primary-hover mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-hub-focus focus-visible:ring-offset-2 focus-visible:outline-none"
         >
           <ArrowLeft className="size-4" />
           Back to ConnectHub

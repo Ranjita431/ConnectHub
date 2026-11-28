@@ -40,18 +40,18 @@ function SignInForm() {
 
   return (
     <div className="w-full max-w-md">
-      <div className="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xl shadow-indigo-100/40 sm:p-9">
+      <div className="border-hub-border bg-hub-surface rounded-3xl border p-7 shadow-xl shadow-hub-primary/5 sm:p-9">
         {/* Heading */}
         <div className="mb-8 text-center">
-          <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
+          <div className="bg-hub-primary-soft text-hub-primary mx-auto flex size-14 items-center justify-center rounded-2xl">
             <LockKeyhole size={25} />
           </div>
 
-          <h1 className="mt-6 text-3xl font-bold tracking-tight text-slate-950">
+          <h1 className="editorial-heading text-hub-title mt-6 text-3xl">
             Welcome back
           </h1>
 
-          <p className="mt-2 text-sm leading-6 text-slate-500">
+          <p className="text-hub-muted mt-2 text-sm leading-6">
             Sign in to continue connecting with your community.
           </p>
         </div>
@@ -66,7 +66,7 @@ function SignInForm() {
           <div>
             <label
               htmlFor="email"
-              className="mb-2 block text-sm font-semibold text-slate-700"
+              className="text-hub-body mb-2 block text-sm font-semibold"
             >
               Email address
             </label>
@@ -74,7 +74,7 @@ function SignInForm() {
             <div className="relative">
               <Mail
                 size={18}
-                className="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400"
+                className="text-hub-subtle absolute top-1/2 left-4 -translate-y-1/2"
               />
 
               <input
@@ -88,7 +88,7 @@ function SignInForm() {
                   setMessage("")
                 }}
                 required
-                className="h-12 w-full rounded-xl border border-slate-200 bg-white pr-4 pl-11 text-sm text-slate-900 transition outline-none placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                className="border-hub-border-control bg-hub-input-surface text-hub-ink placeholder:text-hub-placeholder focus:border-hub-focus focus:ring-hub-focus/15 h-12 w-full rounded-xl border pr-4 pl-11 text-sm transition outline-none hover:border-hub-primary-border focus:ring-4"
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ function SignInForm() {
             <div className="mb-2 flex items-center justify-between">
               <label
                 htmlFor="password"
-                className="text-sm font-semibold text-slate-700"
+                className="text-hub-body text-sm font-semibold"
               >
                 Password
               </label>
@@ -109,7 +109,7 @@ function SignInForm() {
                     "Password recovery is not implemented in this demo.",
                   )
                 }
-                className="text-xs font-semibold text-indigo-600 transition hover:text-indigo-700"
+                className="text-hub-primary hover:text-hub-primary-hover text-xs font-semibold transition-colors"
               >
                 Forgot password?
               </button>
@@ -118,7 +118,7 @@ function SignInForm() {
             <div className="relative">
               <LockKeyhole
                 size={18}
-                className="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400"
+                className="text-hub-subtle absolute top-1/2 left-4 -translate-y-1/2"
               />
 
               <input
@@ -133,14 +133,14 @@ function SignInForm() {
                 }}
                 required
                 minLength={8}
-                className="h-12 w-full rounded-xl border border-slate-200 bg-white pr-12 pl-11 text-sm text-slate-900 transition outline-none placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                className="border-hub-border-control bg-hub-input-surface text-hub-ink placeholder:text-hub-placeholder focus:border-hub-focus focus:ring-hub-focus/15 h-12 w-full rounded-xl border pr-12 pl-11 text-sm transition outline-none hover:border-hub-primary-border focus:ring-4"
               />
 
               <button
                 type="button"
                 aria-label={showPassword ? "Hide password" : "Show password"}
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute top-1/2 right-4 -translate-y-1/2 text-slate-400 transition hover:text-slate-700"
+                className="text-hub-subtle hover:text-hub-body absolute top-1/2 right-4 -translate-y-1/2 transition-colors"
               >
                 {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
@@ -153,9 +153,9 @@ function SignInForm() {
               type="checkbox"
               checked={rememberMe}
               onChange={(event) => setRememberMe(event.target.checked)}
-              className="size-4 rounded border-slate-300 accent-indigo-600 focus:ring-indigo-500"
+              className="accent-hub-primary size-4 rounded border-hub-border-control"
             />
-            <span className="text-sm text-slate-600">Remember me</span>
+            <span className="text-hub-body text-sm">Remember me</span>
           </label>
 
           {/* Feedback */}
@@ -163,7 +163,7 @@ function SignInForm() {
             <div
               role="status"
               aria-live="polite"
-              className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm leading-6 text-indigo-700"
+              className="border-hub-primary-border bg-hub-primary-soft text-hub-primary-deep rounded-xl border px-4 py-3 text-sm leading-6"
             >
               {message}
             </div>
@@ -172,7 +172,7 @@ function SignInForm() {
           {/* Submit */}
           <button
             type="submit"
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 text-sm font-semibold text-white shadow-lg shadow-indigo-200 transition hover:-translate-y-0.5 hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="bg-hub-primary hover:bg-hub-primary-hover focus-visible:outline-hub-focus flex h-12 w-full items-center justify-center gap-2 rounded-xl text-sm font-semibold text-white shadow-lg shadow-hub-primary/15 transition hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             Sign in
             <ArrowRight size={17} />
@@ -181,31 +181,31 @@ function SignInForm() {
 
         {/* Divider */}
         <div className="my-7 flex items-center gap-4">
-          <div className="h-px flex-1 bg-slate-200" />
-          <span className="text-xs font-medium text-slate-400">
+          <div className="bg-hub-divider h-px flex-1" />
+          <span className="text-hub-muted text-xs font-medium">
             CONNECT WITH CONFIDENCE
           </span>
-          <div className="h-px flex-1 bg-slate-200" />
+          <div className="bg-hub-divider h-px flex-1" />
         </div>
 
-        <div className="flex items-center justify-center gap-2 text-xs text-slate-500">
-          <ShieldCheck size={16} className="text-emerald-600" />
+        <div className="text-hub-muted flex items-center justify-center gap-2 text-xs">
+          <ShieldCheck size={16} className="text-hub-success" />
           Your privacy matters to us.
         </div>
 
         {/* Sign up link */}
-        <p className="mt-7 text-center text-sm text-slate-500">
+        <p className="text-hub-muted mt-7 text-center text-sm">
           Don&apos;t have an account?{" "}
           <Link
             href="/sign-up"
-            className="font-semibold text-indigo-600 transition hover:text-indigo-700"
+            className="text-hub-primary hover:text-hub-primary-hover font-semibold transition-colors"
           >
             Create an account
           </Link>
         </p>
       </div>
 
-      <p className="mt-5 text-center text-xs text-slate-400">
+      <p className="text-hub-muted mt-5 text-center text-xs">
         This is a demonstration interface. No credentials are stored.
       </p>
     </div>
@@ -216,7 +216,7 @@ export default function SignInPage() {
   return (
     <Suspense
       fallback={
-        <div className="flex min-h-[60vh] items-center justify-center text-sm text-slate-500">
+        <div className="text-hub-muted flex min-h-[60vh] items-center justify-center text-sm">
           Loading sign in...
         </div>
       }

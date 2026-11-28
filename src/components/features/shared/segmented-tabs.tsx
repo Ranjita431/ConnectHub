@@ -51,7 +51,7 @@ export function SegmentedTabs({
     <div
       role="tablist"
       aria-label={ariaLabel}
-      className="flex max-w-full gap-1 overflow-x-auto rounded-xl bg-[#eeece8] p-1"
+      className="flex max-w-full gap-1 overflow-x-auto rounded-xl border border-hub-border-subtle bg-hub-surface-warm p-1"
     >
       {items.map((item, index) => {
         const isSelected = item.id === value
@@ -71,7 +71,7 @@ export function SegmentedTabs({
             onKeyDown={(event) => handleKeyDown(event, index)}
             className={`focus-visible:outline-hub-focus inline-flex min-h-9 shrink-0 items-center gap-2 rounded-lg px-3 text-xs font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-1 motion-reduce:transition-none ${
               isSelected
-                ? "text-hub-primary-hover bg-white shadow-sm"
+                ? "text-hub-primary-hover bg-hub-surface shadow-sm shadow-[#413247]/5"
                 : "text-hub-muted hover:text-hub-ink"
             }`}
           >

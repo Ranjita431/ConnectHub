@@ -15,17 +15,17 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
   }, [error])
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
-      <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-        <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-rose-50 text-rose-600">
+    <div className="bg-hub-canvas flex min-h-screen items-center justify-center px-4">
+      <div className="border-hub-border bg-hub-surface w-full max-w-md rounded-2xl border p-8 text-center shadow-sm">
+        <div className="bg-hub-danger-soft text-hub-danger mx-auto flex size-14 items-center justify-center rounded-2xl">
           <AlertTriangle className="size-7" />
         </div>
 
-        <h1 className="mt-5 text-xl font-bold text-slate-900">
+        <h1 className="editorial-heading text-hub-title mt-5 text-2xl">
           Something went wrong
         </h1>
 
-        <p className="mt-2 text-sm leading-6 text-slate-500">
+        <p className="text-hub-muted mt-2 text-sm leading-6">
           We encountered an unexpected problem. Please try again.
         </p>
 

@@ -59,7 +59,7 @@ export function CommunityDetail({ communityId }: { communityId: string }) {
       </Link>
 
       <section className="border-hub-border overflow-hidden rounded-[1.4rem] border bg-white">
-        <CommunityArt community={community} className="h-36 sm:h-48" />
+        <CommunityArt community={community} className="h-40 sm:h-52" />
         <div className="flex flex-col gap-5 p-5 sm:flex-row sm:items-end sm:justify-between sm:p-7">
           <div className="min-w-0">
             <Badge
@@ -68,7 +68,7 @@ export function CommunityDetail({ communityId }: { communityId: string }) {
             >
               {community.category}
             </Badge>
-            <h1 className="text-hub-title mt-3 text-2xl font-semibold tracking-[-0.045em] sm:text-3xl">
+            <h1 className="editorial-heading text-hub-title mt-3 text-2xl sm:text-3xl">
               {community.name}
             </h1>
             <p className="text-hub-muted mt-2 max-w-2xl text-sm leading-6">

@@ -47,41 +47,41 @@ export function LandingCommunities() {
         <div className="mt-11 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-[1.12fr_0.88fr]">
           <Link
             href="/explore"
-            className="group focus-visible:outline-hub-primary relative flex min-h-[310px] flex-col justify-between overflow-hidden rounded-[1.75rem] bg-[#dce4d5] p-6 transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 sm:row-span-2 sm:min-h-[420px] sm:p-8"
+            className="group focus-visible:outline-hub-primary relative flex min-h-[310px] flex-col justify-between overflow-hidden rounded-2xl bg-[#dce4d5] p-6 transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 sm:row-span-2 sm:min-h-[420px] sm:p-8"
           >
             <div className="relative z-10 flex items-start justify-between">
-              <span className="text-hub-success rounded-full bg-white/70 px-3 py-1.5 text-[10px] font-semibold tracking-[0.1em] uppercase">
+              <span className="rounded-full bg-white/85 px-3 py-1.5 text-[10px] font-semibold tracking-[0.1em] text-[#584c57] uppercase">
                 OUTDOORS · SLOW LIVING
               </span>
               <ArrowUpRight
                 size={18}
-                className="text-hub-success transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 aria-hidden="true"
               />
             </div>
 
-            <div
-              className="absolute inset-0 overflow-hidden"
-              aria-hidden="true"
-            >
-              <div className="absolute -top-14 right-[-8%] size-64 rounded-full border border-[#71816b]/25 sm:size-80" />
-              <div className="absolute top-12 right-[12%] size-40 rounded-full border border-[#71816b]/30 sm:size-52" />
-              <div className="absolute top-[30%] right-[21%] size-24 rounded-full bg-[#bdcba8]/80 sm:size-32" />
-              <div className="absolute right-[35%] bottom-[23%] h-28 w-px rotate-[30deg] bg-[#6b7b63]/40" />
-              <div className="absolute right-[25%] bottom-[18%] h-20 w-px rotate-[-24deg] bg-[#6b7b63]/40" />
-              <span className="bg-hub-primary absolute top-[46%] right-[19%] size-2 rounded-full" />
+            <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03] motion-reduce:transition-none"
+              />
+              <span className="absolute inset-0 bg-gradient-to-t from-[#251f2b]/75 via-[#251f2b]/18 to-[#251f2b]/10" />
             </div>
 
             <div className="relative z-10 max-w-sm">
-              <span className="text-hub-success text-[10px] font-semibold tracking-[0.15em] uppercase">
+              <span className="text-white/75 text-[10px] font-semibold tracking-[0.15em] uppercase">
                 A sample space
               </span>
-              <h3 className="mt-2 text-3xl leading-tight font-medium tracking-[-0.05em] text-[#243025] sm:text-4xl">
+              <h3 className="editorial-heading mt-2 text-3xl leading-tight text-white drop-shadow-sm sm:text-4xl">
                 Weekend
                 <br />
                 Field Notes
               </h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-[#52604f]">
+              <p className="mt-3 max-w-xs text-sm leading-6 text-white/85">
                 For the walks, small discoveries, and stories worth bringing
                 back.
               </p>
@@ -90,33 +90,37 @@ export function LandingCommunities() {
 
           <Link
             href="/explore"
-            className="group focus-visible:outline-hub-primary relative flex min-h-[210px] flex-col justify-between overflow-hidden rounded-[1.75rem] bg-[#eee1c8] p-6 transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 sm:p-7"
+            className="group focus-visible:outline-hub-primary relative flex min-h-[210px] flex-col justify-between overflow-hidden rounded-2xl bg-[#eee1c8] p-6 transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 sm:p-7"
           >
             <div className="relative z-10 flex items-start justify-between">
-              <span className="text-hub-avatar-ochre-ink rounded-full bg-white/70 px-3 py-1.5 text-[10px] font-semibold tracking-[0.1em] uppercase">
+              <span className="rounded-full bg-white/85 px-3 py-1.5 text-[10px] font-semibold tracking-[0.1em] text-[#5b4b42] uppercase">
                 BOOKS · BIG IDEAS
               </span>
               <ArrowUpRight
                 size={18}
-                className="text-hub-avatar-ochre-ink transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 aria-hidden="true"
               />
             </div>
-            <div
-              className="absolute right-12 bottom-8 flex h-24 w-20 rotate-[8deg] items-center justify-center rounded-l-sm rounded-r-md bg-[#bf775a] shadow-lg shadow-[#78513d]/15 transition-transform duration-300 group-hover:rotate-[3deg] sm:right-16 sm:h-28 sm:w-24"
-              aria-hidden="true"
-            >
-              <span className="h-16 w-px bg-white/35" />
-              <span className="absolute inset-y-3 left-3 w-px bg-white/30" />
+            <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1000&q=85"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                className="size-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04] motion-reduce:transition-none"
+              />
+              <span className="absolute inset-0 bg-gradient-to-r from-[#28232d]/82 via-[#28232d]/48 to-transparent" />
             </div>
             <div className="relative z-10 max-w-[65%]">
-              <span className="text-hub-avatar-ochre-ink text-[10px] font-semibold tracking-[0.15em] uppercase">
+              <span className="text-white/75 text-[10px] font-semibold tracking-[0.15em] uppercase">
                 A sample space
               </span>
-              <h3 className="mt-2 text-2xl font-medium tracking-[-0.045em] text-[#332a21]">
+              <h3 className="editorial-heading mt-2 text-2xl text-white drop-shadow-sm">
                 The Margin Notes
               </h3>
-              <p className="mt-1 text-[13px] leading-5 text-[#756550]">
+              <p className="mt-1 text-[13px] leading-5 text-white/85">
                 Read a little. Think a lot.
               </p>
             </div>
@@ -124,34 +128,37 @@ export function LandingCommunities() {
 
           <Link
             href="/explore"
-            className="group focus-visible:outline-hub-primary relative flex min-h-[210px] flex-col justify-between overflow-hidden rounded-[1.75rem] bg-[#ded9ed] p-6 transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 sm:p-7"
+            className="group focus-visible:outline-hub-primary relative flex min-h-[210px] flex-col justify-between overflow-hidden rounded-2xl bg-[#ded9ed] p-6 transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 sm:p-7"
           >
             <div className="relative z-10 flex items-start justify-between">
-              <span className="text-hub-avatar-plum-ink rounded-full bg-white/70 px-3 py-1.5 text-[10px] font-semibold tracking-[0.1em] uppercase">
+              <span className="rounded-full bg-white/85 px-3 py-1.5 text-[10px] font-semibold tracking-[0.1em] text-[#544459] uppercase">
                 ART · MAKING
               </span>
               <ArrowUpRight
                 size={18}
-                className="text-hub-avatar-plum-ink transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 aria-hidden="true"
               />
             </div>
-            <div
-              className="absolute right-7 bottom-8 flex -rotate-6 gap-1.5"
-              aria-hidden="true"
-            >
-              <span className="size-10 rounded-full bg-[#ed9877]" />
-              <span className="bg-hub-primary mt-4 size-10 rounded-full" />
-              <span className="mt-1 size-10 rounded-full bg-[#a7b677]" />
+            <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                className="size-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04] motion-reduce:transition-none"
+              />
+              <span className="absolute inset-0 bg-gradient-to-r from-[#28232d]/82 via-[#28232d]/48 to-transparent" />
             </div>
             <div className="relative z-10 max-w-[65%]">
-              <span className="text-hub-avatar-plum-ink text-[10px] font-semibold tracking-[0.15em] uppercase">
+              <span className="text-white/75 text-[10px] font-semibold tracking-[0.15em] uppercase">
                 A sample space
               </span>
-              <h3 className="mt-2 text-2xl font-medium tracking-[-0.045em] text-[#332b43]">
+              <h3 className="editorial-heading mt-2 text-2xl text-white drop-shadow-sm">
                 The Open Studio
               </h3>
-              <p className="mt-1 text-[13px] leading-5 text-[#716a80]">
+              <p className="mt-1 text-[13px] leading-5 text-white/85">
                 Make things. Share the in-between.
               </p>
             </div>

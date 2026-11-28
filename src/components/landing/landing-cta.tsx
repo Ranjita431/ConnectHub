@@ -10,12 +10,12 @@ export function LandingCta() {
     >
       <div className="mx-auto grid min-h-[390px] max-w-[1320px] items-center gap-8 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-24">
         <div className="relative z-10 max-w-2xl">
-          <p className="text-[10px] font-semibold tracking-[0.18em] text-[#c8baff] uppercase">
+          <p className="text-[10px] font-semibold tracking-[0.18em] text-[#e0d5e5] uppercase">
             Your next chapter can start small
           </p>
           <h2
             id="cta-title"
-            className="mt-4 text-3xl leading-[1.05] font-medium tracking-[-0.055em] sm:text-4xl lg:text-[3.5rem]"
+            className="editorial-heading mt-4 text-3xl leading-[1.05] sm:text-4xl lg:text-[3.5rem]"
           >
             There&apos;s more out there.
             <br />

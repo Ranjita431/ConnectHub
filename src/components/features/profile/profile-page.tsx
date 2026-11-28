@@ -39,12 +39,19 @@ export function ProfilePage({ personId }: ProfilePageProps) {
 
   return (
     <div className="mx-auto w-full max-w-[1080px] space-y-6">
-      <section className="border-hub-border relative overflow-hidden rounded-2xl border bg-white">
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-0 h-28 bg-[radial-gradient(ellipse_at_85%_20%,rgba(144,128,220,0.2),transparent_44%),linear-gradient(110deg,#f6f3eb,#f0edf8_58%,#f7f4ec)]"
-        />
-        <div className="relative px-5 pt-14 pb-6 sm:px-8">
+      <section className="border-hub-border relative overflow-hidden rounded-2xl border bg-hub-surface">
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-36 overflow-hidden bg-hub-lavender-surface">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1600&q=85"
+            alt=""
+            className="size-full object-cover object-center"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#342e3b]/10 via-transparent to-white/30" />
+        </div>
+        <div className="relative px-5 pt-20 pb-6 sm:px-8">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <div className="flex min-w-0 items-end gap-4">
               <Avatar
@@ -56,7 +63,7 @@ export function ProfilePage({ personId }: ProfilePageProps) {
                 <p className="text-hub-primary-mid text-[10px] font-semibold tracking-[0.16em] uppercase">
                   {isCurrentUser ? "Your corner of ConnectHub" : person?.role}
                 </p>
-                <h1 className="text-hub-title mt-1 truncate text-2xl font-semibold tracking-[-0.045em] sm:text-[2rem]">
+                <h1                 className="editorial-heading text-hub-title mt-1 truncate text-2xl sm:text-[2rem]">
                   {profile.name}
                 </h1>
               </div>
@@ -98,6 +105,14 @@ export function ProfilePage({ personId }: ProfilePageProps) {
                   </button>
                 )}
               </div>
+            )}
+            {isCurrentUser && (
+              <Link
+                href="/settings"
+                className="inline-flex min-h-10 items-center justify-center rounded-full border border-hub-border-control bg-white px-4 text-xs font-semibold text-hub-primary transition-colors hover:bg-hub-primary-wash"
+              >
+                Edit profile
+              </Link>
             )}
           </div>
 

@@ -19,7 +19,7 @@ export function CommunityCard({
 
   return (
     <article
-      className={`group border-hub-border overflow-hidden rounded-2xl border bg-white ${
+      className={`group border-hub-border overflow-hidden rounded-xl border bg-hub-surface shadow-sm shadow-[#413247]/[0.035] transition-shadow duration-200 hover:shadow-md hover:shadow-[#413247]/[0.07] motion-reduce:transition-none ${
         featured ? "md:row-span-2" : ""
       }`}
     >

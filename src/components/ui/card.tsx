@@ -5,7 +5,7 @@ function Card({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
-        "rounded-2xl border border-slate-200 bg-white shadow-sm",
+        "border-hub-border-control bg-hub-surface rounded-2xl border shadow-sm",
         className,
       )}
       {...props}
@@ -25,7 +25,7 @@ function CardTitle({
 }: HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h3
-      className={cn("text-base font-semibold text-slate-900", className)}
+      className={cn("text-hub-title text-base font-semibold", className)}
       {...props}
     />
   )
@@ -35,7 +35,7 @@ function CardDescription({
   className,
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn("text-sm text-slate-500", className)} {...props} />
+  return <p className={cn("text-hub-muted text-sm", className)} {...props} />
 }
 
 function CardContent({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
@@ -46,7 +46,7 @@ function CardFooter({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
-        "flex items-center border-t border-slate-100 p-5",
+        "border-hub-divider flex items-center border-t p-5",
         className,
       )}
       {...props}

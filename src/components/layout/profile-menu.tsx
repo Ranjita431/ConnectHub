@@ -60,7 +60,7 @@ export function ProfileMenu() {
         <Avatar
           name={profileName}
           size="sm"
-          className="text-hub-brand-mark bg-[#e8e3f7]"
+          className="text-hub-brand-mark bg-hub-avatar-lavender"
         />
         <span className="hidden text-[12px] font-semibold text-[#383541] md:block">
           {profileName}
@@ -75,7 +75,7 @@ export function ProfileMenu() {
       {isOpen && (
         <div
           id="profile-menu"
-          className="border-hub-border-control absolute top-full right-0 z-50 mt-2 w-56 rounded-xl border bg-white p-2 shadow-xl shadow-[#272238]/10"
+          className="border-hub-border-control bg-hub-surface absolute top-full right-0 z-50 mt-2 w-56 rounded-xl border p-2 shadow-xl shadow-[#272238]/10"
         >
           <div className="border-hub-divider-soft border-b px-3 py-2.5">
             <p className="text-hub-ink text-xs font-semibold">{profileName}</p>

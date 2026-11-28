@@ -34,7 +34,7 @@ function Avatar({
       role="img"
       aria-label={`${name}'s avatar`}
       className={cn(
-        "flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-indigo-100 font-semibold text-indigo-700",
+        "bg-hub-avatar-lavender text-hub-avatar-lavender-ink flex shrink-0 items-center justify-center overflow-hidden rounded-full font-semibold",
         sizes[size],
         className,
       )}

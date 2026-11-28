@@ -13,7 +13,7 @@ export function AppHeader() {
   ).length
 
   return (
-    <header className="border-hub-border-subtle sticky top-0 z-30 flex h-[68px] items-center justify-between gap-3 border-b bg-white/95 px-3 backdrop-blur-md sm:px-6 lg:px-8">
+    <header className="border-hub-border-subtle sticky top-0 z-30 flex h-[68px] items-center justify-between gap-3 border-b bg-hub-surface/95 px-3 backdrop-blur-md sm:px-6 lg:px-8">
       <AppSearch />
       <div className="ml-1 flex shrink-0 items-center gap-1.5 sm:ml-4 sm:gap-3">
         <Link

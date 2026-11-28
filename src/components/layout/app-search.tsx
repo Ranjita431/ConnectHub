@@ -51,6 +51,13 @@ const destinations: SearchResult[] = [
     searchText: "updates activity",
   },
   {
+    label: "Moments",
+    href: "/moments",
+    description: "Watch short community stories",
+    kind: "Page",
+    searchText: "video short reel",
+  },
+  {
     label: "Settings",
     href: "/settings",
     description: "Profile and privacy preferences",
@@ -157,7 +164,7 @@ export function AppSearch() {
         aria-label="Search people, communities, and interests"
         aria-controls="app-search-suggestions"
         autoComplete="off"
-        className="border-hub-border-control text-hub-ink placeholder:text-hub-placeholder focus:border-hub-primary-light focus:ring-hub-accent/10 h-10 w-full rounded-xl border bg-[#f8f7fa] pr-4 pl-10 text-[12px] transition-colors outline-none hover:border-[#d8d2ea] focus:bg-white focus:ring-3 motion-reduce:transition-none sm:h-11 sm:text-[13px]"
+        className="border-hub-border-control bg-hub-input-surface text-hub-ink placeholder:text-hub-placeholder focus:border-hub-primary-light focus:ring-hub-accent/10 h-10 w-full rounded-xl border pr-4 pl-10 text-[12px] transition-colors outline-none hover:border-hub-primary-border focus:bg-hub-surface focus:ring-3 motion-reduce:transition-none sm:h-11 sm:text-[13px]"
       />
 
       {isOpen && (

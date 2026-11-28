@@ -2,13 +2,14 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { House, Compass, Users, MessageCircle, UsersRound } from "lucide-react"
+import { House, Compass, Users, MessageCircle, UsersRound, Clapperboard } from "lucide-react"
 
 const navigation = [
   { label: "Home", href: "/home", icon: House },
   { label: "Explore", href: "/explore", icon: Compass },
   { label: "Connections", href: "/connections", icon: UsersRound },
   { label: "Communities", href: "/communities", icon: Users },
+  { label: "Moments", href: "/moments", icon: Clapperboard },
   { label: "Messages", href: "/messages", icon: MessageCircle },
 ]
 
@@ -18,7 +19,7 @@ export function MobileNavigation() {
   return (
     <nav
       aria-label="Mobile navigation"
-      className="border-hub-border-subtle fixed inset-x-0 bottom-0 z-40 border-t bg-white/95 px-1.5 pt-1.5 pb-[env(safe-area-inset-bottom)] backdrop-blur-md lg:hidden"
+      className="border-hub-border-subtle fixed inset-x-0 bottom-0 z-40 border-t bg-hub-surface/95 px-1.5 pt-1.5 pb-[env(safe-area-inset-bottom)] backdrop-blur-md lg:hidden"
     >
       <div className="mx-auto flex max-w-lg items-center justify-around">
         {navigation.map((item) => {

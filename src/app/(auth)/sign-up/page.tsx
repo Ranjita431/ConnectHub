@@ -52,18 +52,18 @@ export default function SignUpPage() {
 
   return (
     <div className="w-full max-w-md">
-      <div className="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xl shadow-indigo-100/40 sm:p-9">
+      <div className="border-hub-border bg-hub-surface rounded-3xl border p-7 shadow-xl shadow-hub-primary/5 sm:p-9">
         {/* Heading */}
         <div className="mb-7 text-center">
-          <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600">
+          <div className="bg-hub-primary-soft text-hub-primary mx-auto flex size-14 items-center justify-center rounded-2xl">
             <UserRound size={25} />
           </div>
 
-          <h1 className="mt-5 text-3xl font-bold tracking-tight text-slate-950">
+          <h1 className="editorial-heading text-hub-title mt-5 text-3xl">
             Create your account
           </h1>
 
-          <p className="mt-2 text-sm leading-6 text-slate-500">
+          <p className="text-hub-muted mt-2 text-sm leading-6">
             Join ConnectHub and start building meaningful connections.
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function SignUpPage() {
           <div>
             <label
               htmlFor="fullName"
-              className="mb-2 block text-sm font-semibold text-slate-700"
+              className="text-hub-body mb-2 block text-sm font-semibold"
             >
               Full name
             </label>
@@ -82,7 +82,7 @@ export default function SignUpPage() {
             <div className="relative">
               <UserRound
                 size={18}
-                className="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400"
+                className="text-hub-subtle absolute top-1/2 left-4 -translate-y-1/2"
               />
 
               <input
@@ -97,7 +97,7 @@ export default function SignUpPage() {
                 }}
                 required
                 minLength={2}
-                className="h-12 w-full rounded-xl border border-slate-200 bg-white pr-4 pl-11 text-sm text-slate-900 transition outline-none placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                className="border-hub-border-control bg-hub-input-surface text-hub-ink placeholder:text-hub-placeholder focus:border-hub-focus focus:ring-hub-focus/15 h-12 w-full rounded-xl border pr-4 pl-11 text-sm transition outline-none hover:border-hub-primary-border focus:ring-4"
               />
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function SignUpPage() {
           <div>
             <label
               htmlFor="email"
-              className="mb-2 block text-sm font-semibold text-slate-700"
+              className="text-hub-body mb-2 block text-sm font-semibold"
             >
               Email address
             </label>
@@ -114,7 +114,7 @@ export default function SignUpPage() {
             <div className="relative">
               <Mail
                 size={18}
-                className="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400"
+                className="text-hub-subtle absolute top-1/2 left-4 -translate-y-1/2"
               />
 
               <input
@@ -128,7 +128,7 @@ export default function SignUpPage() {
                   setMessage("")
                 }}
                 required
-                className="h-12 w-full rounded-xl border border-slate-200 bg-white pr-4 pl-11 text-sm text-slate-900 transition outline-none placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                className="border-hub-border-control bg-hub-input-surface text-hub-ink placeholder:text-hub-placeholder focus:border-hub-focus focus:ring-hub-focus/15 h-12 w-full rounded-xl border pr-4 pl-11 text-sm transition outline-none hover:border-hub-primary-border focus:ring-4"
               />
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function SignUpPage() {
           <div>
             <label
               htmlFor="password"
-              className="mb-2 block text-sm font-semibold text-slate-700"
+              className="text-hub-body mb-2 block text-sm font-semibold"
             >
               Password
             </label>
@@ -145,7 +145,7 @@ export default function SignUpPage() {
             <div className="relative">
               <LockKeyhole
                 size={18}
-                className="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400"
+                className="text-hub-subtle absolute top-1/2 left-4 -translate-y-1/2"
               />
 
               <input
@@ -160,20 +160,20 @@ export default function SignUpPage() {
                 }}
                 required
                 minLength={8}
-                className="h-12 w-full rounded-xl border border-slate-200 bg-white pr-12 pl-11 text-sm text-slate-900 transition outline-none placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                className="border-hub-border-control bg-hub-input-surface text-hub-ink placeholder:text-hub-placeholder focus:border-hub-focus focus:ring-hub-focus/15 h-12 w-full rounded-xl border pr-12 pl-11 text-sm transition outline-none hover:border-hub-primary-border focus:ring-4"
               />
 
               <button
                 type="button"
                 aria-label={showPassword ? "Hide password" : "Show password"}
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute top-1/2 right-4 -translate-y-1/2 text-slate-400 transition hover:text-slate-700"
+                className="text-hub-subtle hover:text-hub-body absolute top-1/2 right-4 -translate-y-1/2 transition-colors"
               >
                 {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
             </div>
 
-            <p className="mt-2 text-xs text-slate-400">
+            <p className="text-hub-muted mt-2 text-xs">
               Use at least 8 characters.
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function SignUpPage() {
           <div>
             <label
               htmlFor="confirmPassword"
-              className="mb-2 block text-sm font-semibold text-slate-700"
+              className="text-hub-body mb-2 block text-sm font-semibold"
             >
               Confirm password
             </label>
@@ -190,7 +190,7 @@ export default function SignUpPage() {
             <div className="relative">
               <LockKeyhole
                 size={18}
-                className="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400"
+                className="text-hub-subtle absolute top-1/2 left-4 -translate-y-1/2"
               />
 
               <input
@@ -205,7 +205,7 @@ export default function SignUpPage() {
                 }}
                 required
                 minLength={8}
-                className="h-12 w-full rounded-xl border border-slate-200 bg-white pr-12 pl-11 text-sm text-slate-900 transition outline-none placeholder:text-slate-400 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                className="border-hub-border-control bg-hub-input-surface text-hub-ink placeholder:text-hub-placeholder focus:border-hub-focus focus:ring-hub-focus/15 h-12 w-full rounded-xl border pr-12 pl-11 text-sm transition outline-none hover:border-hub-primary-border focus:ring-4"
               />
 
               <button
@@ -216,7 +216,7 @@ export default function SignUpPage() {
                     : "Show confirm password"
                 }
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="absolute top-1/2 right-4 -translate-y-1/2 text-slate-400 transition hover:text-slate-700"
+                className="text-hub-subtle hover:text-hub-body absolute top-1/2 right-4 -translate-y-1/2 transition-colors"
               >
                 {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
@@ -232,16 +232,16 @@ export default function SignUpPage() {
                 setAcceptedTerms(event.target.checked)
                 setMessage("")
               }}
-              className="mt-0.5 size-4 shrink-0 rounded border-slate-300 accent-indigo-600 focus:ring-indigo-500"
+              className="accent-hub-primary border-hub-border-control mt-0.5 size-4 shrink-0 rounded"
             />
 
-            <span className="text-xs leading-5 text-slate-500">
+            <span className="text-hub-muted text-xs leading-5">
               I agree to the{" "}
-              <span className="font-semibold text-indigo-600">
+              <span className="text-hub-primary font-semibold">
                 Terms and Conditions
               </span>{" "}
               and{" "}
-              <span className="font-semibold text-indigo-600">
+              <span className="text-hub-primary font-semibold">
                 Privacy Policy
               </span>
               .
@@ -253,7 +253,7 @@ export default function SignUpPage() {
             <div
               role="status"
               aria-live="polite"
-              className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm leading-6 text-indigo-700"
+              className="border-hub-primary-border bg-hub-primary-soft text-hub-primary-deep rounded-xl border px-4 py-3 text-sm leading-6"
             >
               {message}
             </div>
@@ -262,7 +262,7 @@ export default function SignUpPage() {
           {/* Submit */}
           <button
             type="submit"
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 text-sm font-semibold text-white shadow-lg shadow-indigo-200 transition hover:-translate-y-0.5 hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="bg-hub-primary hover:bg-hub-primary-hover focus-visible:outline-hub-focus flex h-12 w-full items-center justify-center gap-2 rounded-xl text-sm font-semibold text-white shadow-lg shadow-hub-primary/15 transition hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             Create account
             <ArrowRight size={17} />
@@ -270,24 +270,24 @@ export default function SignUpPage() {
         </form>
 
         {/* Privacy note */}
-        <div className="mt-6 flex items-center justify-center gap-2 text-xs text-slate-500">
-          <ShieldCheck size={16} className="text-emerald-600" />
+        <div className="text-hub-muted mt-6 flex items-center justify-center gap-2 text-xs">
+          <ShieldCheck size={16} className="text-hub-success" />
           Your information stays private in this demo.
         </div>
 
         {/* Sign in link */}
-        <p className="mt-6 text-center text-sm text-slate-500">
+        <p className="text-hub-muted mt-6 text-center text-sm">
           Already have an account?{" "}
           <Link
             href="/sign-in"
-            className="font-semibold text-indigo-600 transition hover:text-indigo-700"
+            className="text-hub-primary hover:text-hub-primary-hover font-semibold transition-colors"
           >
             Sign in
           </Link>
         </p>
       </div>
 
-      <p className="mt-5 text-center text-xs text-slate-400">
+      <p className="text-hub-muted mt-5 text-center text-xs">
         Demonstration only. No credentials are stored and no account is created.
       </p>
     </div>

@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react"
 import Link from "next/link"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { Compass, Search, SlidersHorizontal, X } from "lucide-react"
+import { Compass, Heart, Search, SlidersHorizontal, X } from "lucide-react"
 import { EmptyState } from "@/components/feedback/empty-state"
 import { CommunityCard } from "@/components/features/shared/community-card"
 import { DemoNote } from "@/components/features/shared/demo-note"
@@ -26,6 +26,7 @@ const exploreTabs = [
 export function ExplorePage() {
   const [query, setQuery] = useState("")
   const [activeTab, setActiveTab] = useState("all")
+  const [likedGalleryItems, setLikedGalleryItems] = useState<Set<string>>(new Set())
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -215,6 +216,56 @@ export function ExplorePage() {
       />
 
       <TabPanel idPrefix="explore" value={activeTab} className="space-y-8">
+        {activeTab === "all" && (
+          <section aria-labelledby="visual-discovery-title">
+            <div className="mb-4">
+              <p className="text-hub-primary-mid text-[10px] font-semibold tracking-[0.14em] uppercase">
+                Fresh from the community
+              </p>
+              <h2 id="visual-discovery-title" className="mt-1 text-xl font-semibold tracking-[-0.035em] text-hub-title">
+                Today&apos;s visual trail
+              </h2>
+            </div>
+            <div className="columns-2 gap-3 sm:columns-3 lg:columns-4">
+              {[
+                ["gallery-studio", "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=700&q=85", "In the print studio", "Art & making", "h-72"],
+                ["gallery-coffee", "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=85", "Slow coffee, good notes", "Food & stories", "h-52"],
+                ["gallery-walk", "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=85", "A view worth the climb", "Outdoors", "h-64"],
+                ["gallery-garden", "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=700&q=85", "The balcony harvest", "Slow living", "h-80"],
+                ["gallery-books", "https://images.unsplash.com/photo-1526243741027-444d633d7365?auto=format&fit=crop&w=700&q=85", "One more chapter", "Books", "h-56"],
+                ["gallery-music", "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=85", "A late rehearsal", "Music", "h-72"],
+              ].map(([id, url, title, category, height]) => (
+                <figure key={id} className={`group relative mb-3 break-inside-avoid overflow-hidden rounded-2xl bg-hub-surface-soft ${height}`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={url} alt={title} className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none" />
+                  <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-black/70 to-transparent p-3 pt-10 text-white">
+                    <span className="min-w-0">
+                      <span className="block truncate text-xs font-semibold">{title}</span>
+                      <span className="mt-1 block text-[9px] text-white/75">{category}</span>
+                    </span>
+                    <button
+                      type="button"
+                      aria-label={likedGalleryItems.has(id) ? `Unlike ${title}` : `Like ${title}`}
+                      aria-pressed={likedGalleryItems.has(id)}
+                      onClick={() =>
+                        setLikedGalleryItems((current) => {
+                          const next = new Set(current)
+                          if (next.has(id)) next.delete(id)
+                          else next.add(id)
+                          return next
+                        })
+                      }
+                      className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm"
+                    >
+                      <Heart size={14} fill={likedGalleryItems.has(id) ? "currentColor" : "none"} />
+                    </button>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
+
         {(activeTab === "all" || activeTab === "communities") && (
           <section aria-labelledby="explore-communities-title">
             <div className="mb-4 flex items-end justify-between gap-3">
